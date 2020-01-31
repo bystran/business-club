@@ -1,0 +1,23 @@
+@import 'app';
+
+.header{
+    color:white;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    svg{
+        width: 120px;
+    }
+    ul{
+        padding:0px;
+        margin:0px; 
+        list-style:none;
+        display:flex;
+        li{
+            padding:5px;
+            display:inline-block;
+            font-size:13px;
+
+        }
+    }
+}
