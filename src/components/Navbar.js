@@ -1,40 +1,71 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { ScrollableLink } from 'react-update-url-on-scroll'
 import {ReactComponent as Logo} from '../assets/logo.svg'
 import '../sass/Navbar.scss'
 
 
 const Navbar = () => {
+    
+    const [scrollPos, setScrollPos] = useState(0)
+    const [classes, setClasses] = useState("atTop")
+
+    const handleScroll = () => {
+        const pastPos = scrollPos
+        const currentPos = window.pageYOffset
+        let classString = ''
+
+        if(currentPos<20){
+            classString = 'atTop'
+        }
+
+        if(currentPos>pastPos){
+            classString = classString.concat(' hidden')
+        }
+
+        setScrollPos(currentPos)
+        setClasses(classString)
+    }
+
+    useEffect(()=>{
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+        }
+    })
+  
+    
     const links = [
         {ref:'/about', title:'About'},
-        {ref:'/team', title:'Team'}
+        {ref:'/team', title:'Team'},
+        {ref:'/contact', title:'Contact'}
     ]
 
     const call_to_action_link = {
-        ref:'/join', title: 'Become Member'
+        ref:'/join', title: 'Join us'
     }
 
     return(
-        <header class='header'>
+        <header className={`header ${classes}`}>
             <Logo />
             <nav>
                 <ul>
                     {
                         links.map((link, index)=>
-                            <li>
+                            <li key={index}>
                                 <ScrollableLink href={link.ref}>
                                     <a>{link.title}</a>
                                 </ScrollableLink>
                             </li>
                         )
                     }
-                    <li>
-                        <ScrollableLink href={call_to_action_link.ref}>
-                            <a>{call_to_action_link.title}</a>
-                        </ScrollableLink>
-                    </li>
+
 
                 </ul>
+                <div className='underlined'> 
+                        <ScrollableLink href={call_to_action_link.ref} >
+                                <a>{call_to_action_link.title}</a>
+                        </ScrollableLink>
+                </div>
             </nav>
         </header>
     )

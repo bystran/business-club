@@ -1,12 +1,32 @@
 @import 'app';
 
 .header{
+    font-size:11px;
     color:white;
     display:flex;
     justify-content: space-around;
     align-items: center;
+    background:darkblue;
+    position:fixed;
+    top:0;
+    width: 100%;
+
+    transition: .5s top, .5s background, .5s font-size;
+
+
     svg{
-        width: 120px;
+        transition: 0.5s height, 0.5s width;
+        width: 100px;
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .underlined{
+        display: flex;
+        align-items: center;
+        margin: 0px 5px;
     }
     ul{
         padding:0px;
@@ -16,8 +36,66 @@
         li{
             padding:5px;
             display:inline-block;
-            font-size:13px;
+            
 
         }
     }
+    @include mq('phone'){
+        font-size: 13px;
+        svg{
+            width: 120px;
+        }
+    }
+    @include mq('tablet-small'){
+        font-size: 13px;
+        justify-content: center;
+        svg{
+            padding: 0px 3%;
+        }
+        ul{
+            li{
+                padding:0px 15px;
+            
+            }
+        }
+        nav{
+            flex-basis: 60%;
+        }
+    }
+    @include mq('tablet-wide'){
+        ul{
+            li{
+                padding:5px 20px;
+            }
+        }
+    }
+    @include mq('desktop'){
+        font-size: 15px;
+        justify-content: center;
+
+        padding: 15px 0px;
+        svg{
+            padding: 0px 3%;
+            height: 50px;
+            width: 150px;
+        }
+        ul{
+            li{
+                padding:0px 20px;
+            
+            }
+        }
+        nav{
+            flex-basis: 70%;
+        }
+    }
+
+
+}
+.atTop{
+    background:transparent;
+    position: relative;
+}
+.hidden{
+    top:-100px;
 }
