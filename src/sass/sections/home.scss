@@ -1,0 +1,55 @@
+@import '../app.scss';
+
+
+.home{
+    background: url(../../assets/home.png) center center ;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    .home-p{
+        padding-top:30%;
+        width: 70%;
+        flex-basis: 70%;
+        h1{
+            font-size: 25px;
+        }
+        p{
+            width: 100%;
+            font-size:13px
+        }
+    }
+    @include mq('phone'){
+        .home-p{
+           padding-top: 40% ;
+        }
+        .second-home-p{
+            padding-top: 25%;
+        }
+    }
+    @include mq('phone-wide'){
+        min-height: auto;
+        .home-p{
+            padding-top:20%;
+            width: 50%;
+            flex-basis: 51%;
+            h1{
+                font-size: 25px;
+            }
+            p{
+                width: 100%;
+                font-size:13px
+            }
+        }
+        .second-home-p{
+            padding-top: 10%;
+            align-self: flex-end;
+            margin-left:auto;
+            padding-right:5%;
+        }
+    }
+
+}

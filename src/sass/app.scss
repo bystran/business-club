@@ -3,8 +3,12 @@
 @import 'mixins';
 @import 'classes';
 
-#root{
-    height: 200vh;
+
+.App{
+    position: relative;
+    .sectionOneToThree{
+        background: $gradient;
+    }
 }
 
 

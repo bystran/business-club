@@ -1,9 +1,9 @@
 @import 'variables';
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap');
 
 body{
     font-family: 'Open Sans', sans-serif;
-    background:$gradient;
+    color:$primary-color;
 }
 body, html{
     overflow-x: hidden;
@@ -14,6 +14,12 @@ body, html{
 }
 
 h1,h2,h3,h4,h5 {
-    font-family: $heading-font;
+    font-family: 'Roboto', 'sans-serif';
+
     color: $primary-color;
+}
+
+hr{
+    border-top: 1px solid $accent-color;
+    border-bottom: 0px;
 }

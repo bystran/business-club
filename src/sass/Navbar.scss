@@ -6,7 +6,7 @@
     display:flex;
     justify-content: space-around;
     align-items: center;
-    background:darkblue;
+    background:$gradient-darker;
     position:fixed;
     top:0;
     width: 100%;
@@ -94,7 +94,7 @@
 }
 .atTop{
     background:transparent;
-    position: relative;
+
 }
 .hidden{
     top:-100px;
