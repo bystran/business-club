@@ -51,5 +51,8 @@
             padding-right:5%;
         }
     }
+    @include mq('tablet'){
+        
+    }
 
 }

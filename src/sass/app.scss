@@ -10,6 +10,16 @@
         background: $gradient;
     }
 }
+.vl{
+    display: none;
+    position: absolute; 
+    top: 20%;
+    left:20px; 
+    @include mq('phone-wide'){
+        display: initial;
+    }
+    
+}
 
 
 
