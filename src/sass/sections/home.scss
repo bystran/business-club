@@ -3,6 +3,7 @@
 
 .home{
     background: url(../../assets/home.png) center center ;
+    background-repeat: no-repeat;
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -44,15 +45,57 @@
                 font-size:13px
             }
         }
-        .second-home-p{
-            padding-top: 10%;
-            align-self: flex-end;
-            margin-left:auto;
-            padding-right:5%;
-        }
+
     }
     @include mq('tablet'){
-        
+        background-position: center top;
+        min-height: 120vh;
+        .home-p{
+            padding-top:20%;
+            width: 40%;
+            margin:0px 10%;
+            flex-basis: 40%;
+            h1{
+                font-size: 35px;
+            }
+            p{
+                width: 100%;
+                font-size:13px
+            }
+
+        }
+        .second-home-p{
+           margin-right:0px;
+           margin-left:20%;
+        }
+
     }
+    @include mq('tablet-wide'){
+        .home-p{
+            flex-basis: 400px;
+            margin:0px 20%;
+            h1{
+                font-size:40px;
+                
+            }
+        }
+        .second-home-p{
+            margin-right:0px;
+            margin-left:20%;
+         }
+    }
+    @include mq('desktop-wide'){
+        .home-p{
+            padding-top:15%;
+            flex-basis:500px;
+            h1{
+                font-size:50px;
+            }
+            p{
+                font-size:16px;
+            }
+        }
+    }
+    
 
 }

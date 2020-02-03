@@ -10,6 +10,7 @@ const Navbar = () => {
     const [classes, setClasses] = useState("atTop")
 
     const handleScroll = () => {
+        console.log('scrolling')
         const pastPos = scrollPos
         const currentPos = window.pageYOffset
         let classString = ''

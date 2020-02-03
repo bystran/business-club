@@ -7,11 +7,12 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <Vl className='vl' color='#4DEDFF'/> 
+      {/* <Vl className='vl' color='#4DEDFF'/>  */}
       <div className='sectionOneToThree'>
        <Home />
 
       </div>
+
 
 
     </div>
