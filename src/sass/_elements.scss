@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'mixins';
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap');
 
 body{
@@ -23,4 +24,19 @@ hr{
     border:0px;
     border-top: 1px solid $accent-color;
     
+}
+h1{
+    font-size: 25px;
+    @include mq('phone-wide'){
+        font-size: 25px;
+    }
+    @include mq('tablet'){
+        font-size: 35px;
+    }
+    @include mq('tablet-wide'){
+        font-size:40px;  
+    }
+    @include mq('desktop-wide'){
+        font-size:50px;
+    }
 }

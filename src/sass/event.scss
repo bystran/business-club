@@ -1,0 +1,36 @@
+@import './app';
+
+.event{
+    display: inline-flex;
+    background:$gradient-darker;
+    width: 100px;
+    height: 100px;
+    padding:15px;
+    margin: 10px;
+    box-shadow: drop-shadow(-8px 4px 12px rgba(0, 0, 0, 0.16));
+    flex-wrap: wrap;
+    align-content: space-around;
+
+    .month-year{
+        color: rgba(255, 255, 255, 0.6);
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 12px;
+
+    }
+    .event-day{
+        width: 100%;
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.6);
+
+    }
+    .event-name{
+        font-size:12px;
+        text-align: center;
+
+    }
+
+}
