@@ -1,10 +1,16 @@
-import React from 'react';
+import React, {useEffect} from 'react'
+import {connect} from 'react-redux'
 import NavBar from './components/Navbar'
 import Vl from  './components/VerticalLine'
 import Home from './sections/Home'
 import Events from './sections/Events'
+import {initMembers} from './reducers/memberReducer'
 
-function App() {
+function App(props) {
+  useEffect(()=>{
+    console.log(initMembers)
+    props.initMembers()
+  },[])
   return (
     <div className="App">
       <NavBar />
@@ -21,4 +27,4 @@ function App() {
   );
 }
 
-export default App;
+export default connect(null, {initMembers} )(App)
