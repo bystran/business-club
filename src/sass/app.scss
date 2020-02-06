@@ -9,6 +9,12 @@
     .sectionOneToThree{
         background: $gradient;
     }
+    .sectionTwo{
+        color: $inverse-color;
+        h1, h2, h3{
+            color:$inverse-color;
+        }
+    }
 }
 .vl{
     display: none;

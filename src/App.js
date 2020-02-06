@@ -4,6 +4,7 @@ import NavBar from './components/Navbar'
 import Vl from  './components/VerticalLine'
 import Home from './sections/Home'
 import Events from './sections/Events'
+import Members from './sections/Members'
 import {initMembers} from './reducers/memberReducer'
 
 function App(props) {
@@ -15,10 +16,13 @@ function App(props) {
     <div className="App">
       <NavBar />
       {/* <Vl className='vl' color='#4DEDFF'/>  */}
-      <div className='sectionOneToThree'>
+      {/* <div className='sectionOneToThree'>
        <Home />
        <Events />
 
+      </div> */}
+      <div className='sectionTwo'>
+        <Members />
       </div>
 
 

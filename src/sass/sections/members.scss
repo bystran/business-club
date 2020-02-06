@@ -1,0 +1,22 @@
+@import '../app';
+
+.members-section{
+
+    .circle-img-cropper{
+        margin: 0 auto;
+        width: 90px;
+        height: 90px;
+        overflow: hidden;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        img{
+            display: inline;
+            margin: 0 auto;
+            //margin-left: -25%; //centers the image
+            height: 100%;
+            width: auto;
+        }
+    
+    }
+}
