@@ -1,0 +1,49 @@
+@import '../app.scss';
+
+$svg-size: 25px;
+
+.footer-container{
+    background: $gradient-darker;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 200px;
+    align-items: center;
+    align-content: space-around;
+    a{
+        color:$primary-color;
+        text-decoration: none;
+    }
+    svg{ //logo
+        width: 120px;
+        height: 60px;
+        @include mq('desktop'){
+            width:160px;
+            height: 70px;
+        }
+    }
+    .icons-container{
+        flex-basis: 100%;
+        display: flex;
+        justify-content: center;
+
+        svg{
+            height: $svg-size ;
+            width: $svg-size;
+            padding: 5px;
+            @include mq('desktop'){
+                height: $svg-size*1.34;
+                width: $svg-size*1.34;
+                padding: 10px;
+            }
+
+        }
+
+        @include mq('tablet'){
+            flex-basis: 30%;
+        }
+
+
+    }
+    
+}

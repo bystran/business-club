@@ -4,28 +4,7 @@
 @import 'classes';
 
 
-.App{
-    position: relative;
-    .sectionOneToThree{
-        background: $gradient;
-    }
-    .sectionTwo{
-        color: $inverse-color;
-        h1, h2, h3{
-            color:$inverse-color;
-        }
-    }
-}
-.vl{
-    display: none;
-    position: absolute; 
-    top: 20%;
-    left:20px; 
-    @include mq('phone-wide'){
-        display: initial;
-    }
-    
-}
+
 
 
 

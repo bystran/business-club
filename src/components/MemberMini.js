@@ -10,7 +10,6 @@ const MemberMini  = (props) => {
 
     return(
         <div className='member-small'>
-            {()=>console.log(require(`../assets/${props.img}`))}
             <div className='circle-img-cropper'>
                 <img 
                     src={require(`../assets/${props.img}`)} 
