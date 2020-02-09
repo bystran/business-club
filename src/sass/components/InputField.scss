@@ -4,7 +4,7 @@ $font-size: 15px;
 
 .input-field{
     font-size: 13px;
-    margin:100px auto;
+    margin:15px auto;
     padding:5px 5px;
     color:black;
     border: 2px solid $dark-color;
@@ -21,6 +21,7 @@ $font-size: 15px;
         padding: 5px 10px; 
         z-index: 1;
         width: 0px;
+        white-space: nowrap;
     }
     input{
         background: transparent;

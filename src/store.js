@@ -4,10 +4,12 @@ import thunk from 'redux-thunk'
 
 import membersReducer from './reducers/memberReducer'
 import memberCardReducer from './reducers/memberCardReducer'
+import recruitFormReducer from './reducers/recruitFormReducer'
 
 const reducer = combineReducers({
     members:membersReducer,
-    memberCard:memberCardReducer
+    memberCard:memberCardReducer,
+    recruitForm:recruitFormReducer
 
   })
 

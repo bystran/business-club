@@ -12,6 +12,7 @@ import {initMembers} from './reducers/memberReducer'
 //test imports 
 
 import InputField from './components/InputField'
+import RecruitForm from './components/RecruitForm'
 
 
 import './sass/components/App.scss'
@@ -36,7 +37,8 @@ function App(props) {
 
       <Footer />  */}
 
-    <InputField />
+      
+      <RecruitForm />
 
 
     </div>
