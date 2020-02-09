@@ -1,0 +1,57 @@
+@import '../app.scss';
+
+$font-size: 15px;
+
+.input-field{
+    font-size: 13px;
+    margin:100px auto;
+    padding:5px 5px;
+    color:black;
+    border: 2px solid $dark-color;
+    width: fit-content;
+    position: relative;
+
+
+    
+
+    label{
+        transition: transform .3s, width .3s, color .3s ;
+        position: absolute;
+        color:grey;
+        padding: 5px 10px; 
+        z-index: 1;
+        width: 0px;
+    }
+    input{
+        background: transparent;
+        position: relative;
+        z-index: 3;
+        padding: 5px 10px; 
+        font-size:15px;
+        border:0px;
+        &:focus{
+            outline: none;
+        }
+    }
+
+    &:focus-within{
+        border-color: #2980b9;
+        label{
+            width:fit-content;
+            transform: translate(0px, -20px);
+            background: white;
+
+            color: #2980b9 !important;
+        }
+    }
+    &.has-value{
+        label{
+            background: white;
+            width:fit-content;
+            transform: translate(0px, -20px);
+            color: $dark-color;
+        }
+
+    }
+}
+

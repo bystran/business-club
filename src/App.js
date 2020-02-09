@@ -9,6 +9,11 @@ import Members from './components/sections/Members'
 import {initMembers} from './reducers/memberReducer'
 
 
+//test imports 
+
+import InputField from './components/InputField'
+
+
 import './sass/components/App.scss'
 
 function App(props) {
@@ -18,10 +23,10 @@ function App(props) {
   },[])
   return (
     <div className="App">
-      <NavBar />
-      {/* <Vl className='vl' color='#4DEDFF'/>  */}
+      {/* <NavBar />
+      <Vl className='vl' color='#4DEDFF'/> 
       <div className='sectionOneToThree'>
-       {/* <Home /> */}
+       <Home />
        <Events />
 
       </div>
@@ -29,8 +34,9 @@ function App(props) {
         <Members />
       </div>
 
-      <Footer /> 
+      <Footer />  */}
 
+    <InputField />
 
 
     </div>
