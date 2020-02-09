@@ -1,14 +1,16 @@
-@import './app';
+@import '../app';
 
 .member-card{
+    animation: 0.2s ease-out 0s 1 popOut;
+    position: relative;
     background: $gradient-darker;
     width: 220px;
     padding:20px;
     margin: 0px auto;
     color:$primary-color;
-    //height: 400px;
     box-shadow: -11px 6px 61px rgba(0, 0, 0, 0.46);
     text-align: center;
+    height: max-content;
     h3{
         font-size:15px;
         color:$primary-color !important;
@@ -37,4 +39,35 @@
     .member-bio{
         text-align: start;
     }
+    .close-btn{
+        position:absolute;
+        top:0;
+        right:0;
+        svg{
+            padding:10px;
+            width: 18px;
+            height: 18px;
+        }
+    }
+    @include mq('tablet'){
+        width: 260px;
+        padding:30px;
+        h3{
+            font-size:17px;
+        }
+        h4{
+            font-size: 14px;
+        }
+        h5{
+            font-size: 13px;
+        }
+        p{
+            font-size:12px;
+        }
+    }
+
+}
+.member-card.closing{
+    animation: 0.2s ease-out 0s 1 popIn;
+    animation-fill-mode: backwards;
 }

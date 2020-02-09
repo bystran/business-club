@@ -1,36 +1,71 @@
-import React from 'react'
-import '../sass/member.scss'
+import React, {useState} from 'react'
+import {connect} from 'react-redux'
+import { hideMembCard } from '../reducers/memberCardReducer'
+
+import '../sass/components/Member.scss'
 import {ReactComponent as Fb} from '../assets/icons/fb.svg'
 import {ReactComponent as Linkedin} from '../assets/icons/linkedin.svg'
 import {ReactComponent as Insta} from '../assets/icons/instagram.svg'
+import {ReactComponent as CloseIcon} from '../assets/icons/close.svg'
 
 const Member = (props) => {
 
+    const [closing, setClosing] = useState('')
+
+    const member = props.member
+
+    const closeCard = () =>{
+        setClosing('closing')
+        props.hideMembCard(180)
+    }
 
     return (
-        <div className='member-card'>
+        <div className={`member-card ${closing}`}>
             <div className='circle-img-cropper'>
                 <img 
-                    src={require(`../assets/${props.img}`)} 
+                    src={require(`../assets${member.img}`)} 
                     alt="profile img"
                 ></img>
             </div>
-            <h3>Sonicka Niaka</h3>
-            <h4>Vice President</h4>
+            <h3>{member.name}</h3>
+            <h4>{member.position}</h4>
             <div className='member-bio'>
-                <h5>Ba Marketing</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <h5>{member.degree}</h5>
+                <p>{member.text}</p>
             </div>
             <div className='icon-row'>
-                <Linkedin />
-                <Fb />
-                <Insta />
-
+                <div className='icons-container'>
+                    <a href={`https://www.instagram.com/${member.fb}`}>
+                    <Insta />
+                    </a>
+                    <a href={`https://www.linkedin.com/${member.li}`}>
+                    <Linkedin />
+                    </a>
+                    <a href={`https://www.faceboook.com/${member.fb}`}>
+                        <Fb />
+                    </a>
+                </div>
             </div>
-                
+
+            <div 
+            className='close-btn'
+            onClick={closeCard}
+            >
+                <CloseIcon />
+            </div>  
             
         </div>
     )
 }
 
-export default Member
+const mapStateToProps = (state) => {
+    return {
+        member:state.memberCard
+    }
+}
+
+const mapDispatchToProps = {
+    hideMembCard
+}
+
+export default connect(mapStateToProps, mapDispatchToProps) (Member)

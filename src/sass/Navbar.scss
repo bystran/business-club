@@ -10,6 +10,7 @@
     position:fixed;
     top:0;
     width: 100%;
+    z-index: 5000;
 
     transition: .5s top, .5s background, .5s font-size;
 

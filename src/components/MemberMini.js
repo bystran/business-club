@@ -9,7 +9,7 @@ const MemberMini  = (props) => {
     }
 
     return(
-        <div className='member-small'>
+        <div className='member-small' onClick={()=>props.onClick()}>
             <div className='circle-img-cropper'>
                 <img 
                     src={require(`../assets/${props.img}`)} 
