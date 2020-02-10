@@ -4,20 +4,22 @@ $font-size: 15px;
 
 .input-field{
     font-size: 13px;
-    margin:15px auto;
+    margin-top:15px;
+    margin-bottom:15px;
     padding:5px 5px;
     color:black;
-    border: 2px solid $dark-color;
+    border: 2px solid $lgrey-color;
     width: fit-content;
     position: relative;
+    text-align: center;
 
 
-    
+        
 
     label{
         transition: transform .3s, width .3s, color .3s ;
         position: absolute;
-        color:grey;
+        color:$lgrey-color;
         padding: 5px 10px; 
         z-index: 1;
         width: 0px;
@@ -27,9 +29,11 @@ $font-size: 15px;
         background: transparent;
         position: relative;
         z-index: 3;
-        padding: 5px 10px; 
+        padding: 5px 0px;
+        margin:0px auto; 
         font-size:15px;
         border:0px;
+        width: 97%;
         &:focus{
             outline: none;
         }

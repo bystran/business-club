@@ -11,7 +11,7 @@ const InputField = (props) => {
         const value = props.value 
         return(
             //conditionally add has-value class if value is not empty str
-            <div className={`input-field ${value !== "" && 'has-value'}`}>
+            <div id={props.id} className={`input-field ${value !== "" && 'has-value'}`}>
                 <label htmlFor={name}>{label}</label>
                 <input 
                 type={type} 
@@ -26,12 +26,12 @@ const InputField = (props) => {
     const renderNumInput = () => {
         const value = props.value
         return(
-            <div className={`input-field ${value !== 0 && 'has-value'}`}>
+            <div id={props.id} className={`input-field ${value !== 0 && 'has-value'}`}>
                 <label htmlFor={name}>{label}</label>
                 <input 
                 type={type} 
                 name={name} 
-                value={value!=0 && value}
+                value={value!==0 && value}
                 onChange={(e)=>props.onChange(e.target.value)}
                 /> 
             </div>
