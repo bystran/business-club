@@ -7,11 +7,10 @@ import Home from './sections/Home'
 import Events from './sections/Events'
 import Members from './components/sections/Members'
 import {initMembers} from './reducers/memberReducer'
+import ScrollableSection from 'react-update-url-on-scroll'
 
 
 //test imports 
-
-import InputField from './components/InputField'
 import RecruitForm from './components/RecruitForm'
 
 
@@ -19,9 +18,8 @@ import './sass/components/App.scss'
 
 function App(props) {
   useEffect(()=>{
-    console.log(initMembers)
     props.initMembers()
-  },[])
+  })
   return (
     <div className="App">
       <NavBar />
@@ -35,9 +33,21 @@ function App(props) {
         {title: '02', top: '600px'},
         {title: '03', top: '1050px'}
         ]}
-       /> 
-       <Home />
-       <Events />
+       />
+        <ScrollableSection name={'about'} meta={{title: 'About'}} >
+          <div>
+            <Home />
+          </div>
+
+        </ScrollableSection>
+
+        <ScrollableSection name={'events'} meta={{title: 'Events'}} >
+         <div>
+           <Events />
+         </div>
+        </ScrollableSection>
+
+
 
       </div>
       <div className='sectionTwo'>
@@ -51,8 +61,20 @@ function App(props) {
         ]}
         
         /> 
-        <Members />
-        <RecruitForm />
+        <ScrollableSection name={'team'} meta={{title: 'Team'}} >
+           <div>
+            <Members />
+           </div>
+        </ScrollableSection>
+        
+
+        <ScrollableSection name={'join'} meta={{title: 'Join us'}} >
+           <div>
+             <RecruitForm />
+           </div>
+        </ScrollableSection>
+
+
 
       </div>
             

@@ -36,9 +36,11 @@ const Navbar = () => {
   
     
     const links = [
+
         {ref:'/about', title:'About'},
+        {ref:'/events', title:'Events'},
         {ref:'/team', title:'Team'},
-        {ref:'/contact', title:'Contact'}
+        
     ]
 
     const call_to_action_link = {
@@ -54,7 +56,7 @@ const Navbar = () => {
                         links.map((link, index)=>
                             <li key={index}>
                                 <ScrollableLink href={link.ref}>
-                                    <a>{link.title}</a>
+                                    <span>{link.title}</span>
                                 </ScrollableLink>
                             </li>
                         )
@@ -64,7 +66,7 @@ const Navbar = () => {
                 </ul>
                 <div className='underlined'> 
                         <ScrollableLink href={call_to_action_link.ref} >
-                                <a>{call_to_action_link.title}</a>
+                                <span>{call_to_action_link.title}</span>
                         </ScrollableLink>
                 </div>
             </nav>
