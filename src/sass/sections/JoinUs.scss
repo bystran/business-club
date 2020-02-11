@@ -1,0 +1,28 @@
+@import '../app.scss';
+
+
+
+.join-us-container{
+    padding:30% 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    .underlined-cmp{
+        margin:0px !important; 
+        width: initial;
+        hr{
+            margin: 0px auto !important;
+        }
+    }
+    h1{
+        text-align: center;
+    }
+    .form{
+        text-align: left;
+        width: max-content ;
+    }
+    @include mq('tablet'){
+        padding:10% 0px;
+    }
+}

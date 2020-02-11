@@ -2,10 +2,7 @@
 
 
 .recruit-form{
-   
-    margin:5% auto;
-    width: fit-content;
-   
+
    
     input[type=submit]{
         background: $gradient-darker;
@@ -34,8 +31,8 @@
 
     @include mq('tablet-small'){
         display:flex;
+        width: min-content;
         flex-wrap:wrap;
-        width:470px;
         margin:0px auto;
         justify-content: flex-start;
         .input-field{
@@ -43,7 +40,7 @@
         }
         #remail{
             margin:20px 5px;
-            width: 300px;
+            width: 318px;
         }
         #rguid, #ryos{
             width: 100px;

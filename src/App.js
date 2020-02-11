@@ -8,7 +8,7 @@ import Events from './sections/Events'
 import Members from './components/sections/Members'
 import {initMembers} from './reducers/memberReducer'
 import ScrollableSection from 'react-update-url-on-scroll'
-
+import JoinUs from './components/sections/JoinUs'
 
 //test imports 
 import RecruitForm from './components/RecruitForm'
@@ -56,7 +56,7 @@ function App(props) {
         color='#2C3E50'
         sections={[
           {title: '04', top: '120px'},
-          {title: '05', top: '600px'},
+          {title: '05', top: '850px'},
 
         ]}
         
@@ -70,7 +70,7 @@ function App(props) {
 
         <ScrollableSection name={'join'} meta={{title: 'Join us'}} >
            <div>
-             <RecruitForm />
+             <JoinUs />
            </div>
         </ScrollableSection>
 
