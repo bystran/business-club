@@ -1,5 +1,4 @@
 import React from 'react'
-import Underlined from '../Underlined'
 import Paragraph from '../Paragraph'
 import '../../sass/sections/Home.scss'
 

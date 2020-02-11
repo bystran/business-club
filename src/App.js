@@ -10,8 +10,7 @@ import {initMembers} from './reducers/memberReducer'
 import ScrollableSection from 'react-update-url-on-scroll'
 import JoinUs from './components/sections/JoinUs'
 
-//test imports 
-import RecruitForm from './components/RecruitForm'
+
 
 
 import './sass/components/App.scss'

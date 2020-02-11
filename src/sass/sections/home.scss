@@ -64,6 +64,7 @@
          }
     }
     @include mq('desktop-wide'){
+        background-size: cover;
         .home-p{
             padding-top:15%;
         }
