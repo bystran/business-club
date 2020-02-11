@@ -1,0 +1,32 @@
+@import '../app';
+
+.paragraph-wrapper{
+    width: 70%;
+    flex-basis: 70%;
+    p{
+        width: 100%;
+        font-size:13px
+    }
+    @include mq('phone-wide'){
+        width: 50%;
+        flex-basis: 50%;
+    }
+    @include mq('tablet'){
+        width: 60%;
+        flex-basis: 60%;
+    }
+    @include mq('tablet-wide'){
+        width: 400px;
+        flex-basis: 400px;
+    }
+
+    @include mq('desktop-wide'){
+        width: 600px;
+        flex-basis:600px;
+        p{
+            font-size:16px;
+        }
+    }
+
+
+}
