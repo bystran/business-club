@@ -2,8 +2,9 @@
 
 
 .home{
-    background: url(../../assets/home.png) center center ;
+    background: url(../../assets/fadedimg.png) center center ;
     background-repeat: no-repeat;
+    background-size: cover;
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -43,7 +44,8 @@
 
     }
     @include mq('tablet'){
-        background-position: center top;
+        background-size: contain;
+        background-position: center -200px;
         min-height: 120vh;
         .home-p{
             padding-top:20%;

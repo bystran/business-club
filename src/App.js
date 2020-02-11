@@ -24,8 +24,8 @@ function App(props) {
   },[])
   return (
     <div className="App">
-      {/* <NavBar />
-      <Vl className='vl' color='#4DEDFF'/> 
+      <NavBar />
+      {/* <Vl className='vl' color='#4DEDFF'/>  */}
       <div className='sectionOneToThree'>
        <Home />
        <Events />
@@ -34,11 +34,11 @@ function App(props) {
       <div className='sectionTwo'>
         <Members />
       </div>
-
-      <Footer />  */}
-
-      
+            
       <RecruitForm />
+      <Footer /> 
+
+
 
 
     </div>
