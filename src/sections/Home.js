@@ -14,7 +14,7 @@ const Home = () => {
                 <Underlined
                     marginLeft = '-10%'
                 >
-                    <h1>Bussiness Club. <br/>Lorem ipsum dolor sit.</h1>
+                    <h1>Bussiness Club. <br/>We get you further</h1>
                 </Underlined>
                 <p>Established in 2010, the Glasgow University Business Club provides students with academic, professional and social opportunities to form a strong network of Business enthusiasts. In collaboration with diverse partner companies, we organise a wide range of events, which foster the development of professional competencies and skills that are needed to succeed in today's highly competitive job market.</p>
 

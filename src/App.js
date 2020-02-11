@@ -25,17 +25,38 @@ function App(props) {
   return (
     <div className="App">
       <NavBar />
-      {/* <Vl className='vl' color='#4DEDFF'/>  */}
+      
       <div className='sectionOneToThree'>
+       <Vl 
+       className='vl' 
+       color='#4DEDFF'
+       sections={[
+        {title: '01', top: '20px'},
+        {title: '02', top: '600px'},
+        {title: '03', top: '1050px'}
+        ]}
+       /> 
        <Home />
        <Events />
 
       </div>
       <div className='sectionTwo'>
+        <Vl 
+        className='vl' 
+        color='#2C3E50'
+        sections={[
+          {title: '04', top: '120px'},
+          {title: '05', top: '600px'},
+
+        ]}
+        
+        /> 
         <Members />
+        <RecruitForm />
+
       </div>
             
-      <RecruitForm />
+
       <Footer /> 
 
 

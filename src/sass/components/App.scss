@@ -4,18 +4,28 @@
     position: relative;
     .sectionOneToThree{
         background: $gradient;
+        position: relative;
+        .vl{
+            height: 85%;
+            top: 15%;
+        }
     }
     .sectionTwo{
+        position: relative;
         color: $inverse-color;
         h1, h2, h3{
             color:$inverse-color;
+        }
+        .vl{
+            height: 100%;
+            top: 0%;
         }
     }
 }
 .vl{
     display: none;
     position: absolute; 
-    top: 20%;
+
     left:20px; 
     @include mq('phone-wide'){
         display: initial;
