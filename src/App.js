@@ -12,7 +12,6 @@ import JoinUs from './components/sections/JoinUs'
 
 
 
-
 import './sass/components/App.scss'
 
 function App(props) {

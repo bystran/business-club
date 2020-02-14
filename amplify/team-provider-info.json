@@ -1,0 +1,15 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-business-club-dev-85134-authRole",
+            "UnauthRoleArn": "arn:aws:iam::731629755860:role/amplify-business-club-dev-85134-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::731629755860:role/amplify-business-club-dev-85134-authRole",
+            "Region": "eu-west-2",
+            "DeploymentBucketName": "amplify-business-club-dev-85134-deployment",
+            "UnauthRoleName": "amplify-business-club-dev-85134-unauthRole",
+            "StackName": "amplify-business-club-dev-85134",
+            "StackId": "arn:aws:cloudformation:eu-west-2:731629755860:stack/amplify-business-club-dev-85134/34abc860-4f07-11ea-87ed-06bdd06f2a66",
+            "AmplifyAppId": "dbhq1g0hkp1ev"
+        }
+    }
+}
