@@ -1,6 +1,9 @@
 
 
 exports.handler = async (event) => {
+    const headers= {
+        "Access-Control-Allow-Origin": "http://localhost:3000"
+    }
     try{
         const axios = require('axios')
         const params = {
@@ -13,17 +16,19 @@ exports.handler = async (event) => {
     
 
         const res  = await axios.get(base_url,{
-            params:params
+            params:params,
         })
-        if(res !== undefined && res.data!== undefined){
+        if(res !== undefined && res.data!== undefined && res.data.data!=undefined){
             const response = {
                 statusCode: 200,
-                body: res.data
+                headers:headers,
+                body: JSON.stringify(res.data.data)
             }
             return response
         }else{
             const response = {
                 statusCode: 500,
+                headers
             };
             
             return response
@@ -35,6 +40,7 @@ exports.handler = async (event) => {
         
         const response = {
             statusCode: 500,
+            headers,
 
         };
 
