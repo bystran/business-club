@@ -7,6 +7,7 @@ import Home from './components/sections/Home'
 import Events from './sections/Events'
 import Members from './components/sections/Members'
 import {initMembers} from './reducers/memberReducer'
+import {initEvents} from './reducers/eventReducer'
 import ScrollableSection from 'react-update-url-on-scroll'
 import JoinUs from './components/sections/JoinUs'
 
@@ -17,6 +18,7 @@ import './sass/components/App.scss'
 function App(props) {
   useEffect(()=>{
     props.initMembers()
+    props.initEvents()
   })
   return (
     <div className="App">
@@ -86,4 +88,4 @@ function App(props) {
   );
 }
 
-export default connect(null, {initMembers} )(App)
+export default connect(null, {initMembers, initEvents} )(App)

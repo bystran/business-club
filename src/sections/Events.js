@@ -1,15 +1,12 @@
 import React from 'react'
+import {connect} from 'react-redux'
 import Event from '../components/Event'
 import Underlined from '../components/Underlined'
 
 import '../sass/sections/events.scss'
 
-const Events = () =>{
-    const events = [
-        {date: "2017-02-03T23:40:17+0000", name:'Panel Discussion'},
-        {date: "2017-02-03T23:40:17+0000", name:'Panel Discussion'},
-        {date: "2017-02-03T23:40:17+0000", name:'Panel Discussion'}
-    ]
+const Events = (props) =>{
+    const events = props.events
     return(
         <div className='events-section'>
             <div className='events-heading'>
@@ -29,5 +26,13 @@ const Events = () =>{
     )
 }
 
+const mapStateToProps = (state) =>{
+    return {
+        events: state.events
+    }
+}
 
-export default Events
+
+
+
+export default connect(mapStateToProps, {})(Events)
