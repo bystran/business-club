@@ -4,6 +4,7 @@ import '../sass/membermini.scss'
 
 const MemberMini  = (props) => {
     
+    
     const handleEroror = e =>{
         e.target.src = BaseImg
     }

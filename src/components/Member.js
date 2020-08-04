@@ -23,7 +23,7 @@ const Member = (props) => {
         <div className={`member-card ${closing}`}>
             <div className='circle-img-cropper'>
                 <img 
-                    src={require(`../assets${member.img}`)} 
+                    src={require(`../assets/${member.img}`)} 
                     alt="profile img"
                 ></img>
             </div>
@@ -35,15 +35,28 @@ const Member = (props) => {
             </div>
             <div className='icon-row'>
                 <div className='icons-container'>
-                    <a href={`https://www.instagram.com/${member.fb}`}>
-                    <Insta />
-                    </a>
-                    <a href={`https://www.linkedin.com/${member.li}`}>
-                    <Linkedin />
-                    </a>
-                    <a href={`https://www.faceboook.com/${member.fb}`}>
-                        <Fb />
-                    </a>
+                    {
+                        member.in &&
+                        <a href={`https://www.instagram.com/${member.in}`}>
+                        <Insta />
+                        </a>
+
+                    }
+                    
+                    {
+                        member.li &&
+                        <a href={`https://www.linkedin.com/in/${member.li}`}>
+                        <Linkedin />
+                        </a>
+                    }
+                    {
+                        member.fb &&
+                        <a href={`https://www.faceboook.com/${member.fb}`}>
+                            <Fb />
+                        </a>
+
+                    }
+
                 </div>
             </div>
 

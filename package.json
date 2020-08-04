@@ -10,6 +10,8 @@
     "aws-amplify-react": "^3.1.5",
     "axios": "^0.19.2",
     "dotenv": "^8.2.0",
+    "eslint": "^7.6.0",
+    "eslint-config-airbnb": "^18.2.0",
     "json-server": "^0.15.1",
     "node-sass": "^4.13.1",
     "react": "^16.12.0",
