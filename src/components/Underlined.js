@@ -1,20 +1,18 @@
-import React from 'react'
-import '../sass/underlined.scss'
+import React from 'react';
+import '../sass/underlined.scss';
 
 const Underlined = (props) => {
-    const style = {
-        marginLeft:props.marginLeft,
-    }
+  const { marginLeft, children } = props;
+  const style = {
+    marginLeft,
+  };
 
+  return (
+    <div className="underlined-cmp">
+      <div className="content">{children}</div>
+      <hr style={style} />
+    </div>
+  );
+};
 
-    return(
-        <div className='underlined-cmp'>
-            <div className='content'>{props.children}</div>
-            <hr style={style}/>
-        </div>  
-    )
-}
-
-
-
-export default Underlined
+export default Underlined;

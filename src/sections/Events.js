@@ -1,38 +1,31 @@
-import React from 'react'
-import {connect} from 'react-redux'
-import Event from '../components/Event'
-import Underlined from '../components/Underlined'
+/* eslint-disable react/no-array-index-key */
+import React from 'react';
+import { connect } from 'react-redux';
+import Event from '../components/Event';
+import Underlined from '../components/Underlined';
 
-import '../sass/sections/events.scss'
+import '../sass/sections/events.scss';
 
-const Events = (props) =>{
-    const events = props.events
-    return(
-        <div className='events-section'>
-            <div className='events-heading'>
-                <Underlined>
-                    <h1>Upcoming events</h1>
-                </Underlined>
-            </div>
+const Events = (props) => {
+  const { events } = props;
+  return (
+    <div className="events-section">
+      <div className="events-heading">
+        <Underlined>
+          <h1>Upcoming events</h1>
+        </Underlined>
+      </div>
 
-            <div className='events'>
-                {events.map((e,index)=>
-                    <Event event={e} key={index}/>
-                )
-                }
-            </div>
-        </div>
+      <div className="events">
+        {events.map((e, index) => <Event event={e} key={index} />)}
+      </div>
+    </div>
 
-    )
-}
+  );
+};
 
-const mapStateToProps = (state) =>{
-    return {
-        events: state.events
-    }
-}
+const mapStateToProps = (state) => ({
+  events: state.events,
+});
 
-
-
-
-export default connect(mapStateToProps, {})(Events)
+export default connect(mapStateToProps, {})(Events);
