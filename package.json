@@ -29,8 +29,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "json-server --watch db.json --port 3001",
-    "validate": "eslint src/**/*js && react-scripts test --no-watch",
-    "lint": "eslint src/**/*js ",
+    "validate": "npm run lint && react-scripts test --watchAll=false",
+    "lint": "echo 'Linting ...' && eslint src/**/*js && echo 'Finished linting.'",
     "lint:fix": "eslint src/**/*js --fix"
   },
   "eslintConfig": {
@@ -53,7 +53,7 @@
   },
   "husky":{
     "hooks":{
-      "pre-commit":"npm validate"
+      "pre-commit":"npm run validate"
     }
   }
 }

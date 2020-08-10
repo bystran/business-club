@@ -12,6 +12,8 @@ const Events = (props) => {
     if (events && !events.error) {
       return events.map((e, index) => <Event event={e} key={index} />);
     }
+
+    return null;
   };
 
   return (
