@@ -8,6 +8,12 @@ import '../sass/sections/events.scss';
 
 const Events = (props) => {
   const { events } = props;
+  const renderEvents = () => {
+    if (events && !events.error) {
+      return events.map((e, index) => <Event event={e} key={index} />);
+    }
+  };
+
   return (
     <div className="events-section">
       <div className="events-heading">
@@ -17,7 +23,7 @@ const Events = (props) => {
       </div>
 
       <div className="events">
-        {events.map((e, index) => <Event event={e} key={index} />)}
+        {renderEvents}
       </div>
     </div>
 

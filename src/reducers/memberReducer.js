@@ -1,7 +1,7 @@
-import membersService from '../services/members';
+// import membersService from '../services/members';
 
 export const initMembers = () => async (dispatch) => {
-  const data = await membersService.getAll();
+  const data = {}; // await membersService.getAll();
   dispatch({
     type: 'INIT-MEMBERS',
     data,

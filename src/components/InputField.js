@@ -5,10 +5,10 @@ const InputField = (props) => {
   const { name, label, type } = props;
 
   const renderTextInput = () => {
-    const { value } = props;
+    const { value, id } = props;
     return (
     // conditionally add has-value class if value is not empty str
-      <div id={props.id} className={`input-field ${value !== '' && 'has-value'}`}>
+      <div id={id} className={`input-field ${value !== '' && 'has-value'}`}>
         <label htmlFor={name}>{label || 'Input'}</label>
         <input
           type={type || 'text'}
@@ -21,9 +21,9 @@ const InputField = (props) => {
   };
 
   const renderNumInput = () => {
-    const { value } = props;
+    const { value, id } = props;
     return (
-      <div id={props.id} className={`input-field ${value !== 0 && 'has-value'}`}>
+      <div id={id} className={`input-field ${value !== 0 && 'has-value'}`}>
         <label htmlFor={name}>{label || 'Input'}</label>
         <input
           type={type || 'text'}
