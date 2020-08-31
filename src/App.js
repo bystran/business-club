@@ -5,7 +5,7 @@ import NavBar from './components/Navbar';
 import Footer from './components/Footer';
 import Vl from './components/VerticalLine';
 import Home from './components/sections/Home';
-import Events from './sections/Events';
+import Events from './components/sections/Events';
 import Members from './components/sections/Members';
 import { initMembers } from './reducers/memberReducer';
 import { initEvents } from './reducers/eventReducer';

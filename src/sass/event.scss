@@ -4,9 +4,11 @@
 
 .event{
     display: inline-flex;
-    background:$gradient-darker;
-    width: 100px;
-    height: 100px;
+    background:$inverse-color;
+
+    max-width: 214px;
+    height: 112px;
+    border-radius: 15px;
     padding:15px;
     margin: 10px;
     box-shadow: drop-shadow(-8px 4px 12px rgba(0, 0, 0, 0.16));
@@ -14,25 +16,27 @@
     align-content: space-around;
 
     .month-year{
-        color: rgba(255, 255, 255, 0.6);
+        color: white;
         display: block;
         width: 100%;
         text-align: center;
-        font-size: 12px;
-
-    }
-    .event-day{
-        width: 100%;
-        font-weight: bold;
-        font-size: 20px;
-        text-align: center;
-        color: rgba(255, 255, 255, 0.6);
+        font-size: 16px;
+        font-weight: normal;
 
     }
     .event-name{
-        font-size:12px;
+        font-size:16px;
         text-align: center;
+        color: white;
+        font-weight: 550;
 
+    }
+    a{
+        display: block;
+        color: $accent-color;
+        width: 100%;
+        text-decoration:none;
+        text-align:center;
     }
 
 }
