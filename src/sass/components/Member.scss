@@ -1,4 +1,5 @@
-@import '../app';
+@import '../variables';
+@import '../mixins';
 
 .member-card{
     animation: 0.2s ease-out 0s 1 popOut;

@@ -38,14 +38,12 @@ function App(props) {
           </div>
 
         </ScrollableSection>
-
-        <ScrollableSection name="events" meta={{ title: 'Events' }}>
-          <div>
-            <Events />
-          </div>
-        </ScrollableSection>
-
       </div>
+      <ScrollableSection name="events" meta={{ title: 'Events' }}>
+        <div>
+          <Events />
+        </div>
+      </ScrollableSection>
       <div className="sectionTwo">
         <Vl
           className="vl"

@@ -1,4 +1,6 @@
-@import '../app.scss';
+@import '../variables';
+@import '../mixins';
+
 
 
 .home{
@@ -14,8 +16,17 @@
     align-content: flex-start;
     .home-p{
         display: flex;
-        justify-content: center;;
-        padding-top:30%;
+        justify-content: center;
+        padding-top:60%;
+        .p-wrapper{
+            width:85%;
+            flex-basis: 85%;
+        }
+    }
+    .link-btn{
+        display: block;
+        width:max-content;
+        margin:20px 0px;
     }
     @include mq('phone'){
         .home-p{
@@ -29,7 +40,11 @@
         min-height: auto !important;
         .home-p{
             padding-top:20%;
-
+        }
+        .link-btn{
+            display: inline-block;
+            margin:20px 0px;
+            margin-right:20px;
         }
         .second-home-p{
             justify-content: flex-end;
@@ -40,10 +55,17 @@
     @include mq('tablet'){
         background-size: contain;
         background-position: center -200px;
+
     
         .home-p{
-            padding-top:20%;
-            margin:0px 10%;
+            width: 100%;
+            flex-basis:100%;
+            padding-left:200px;
+            justify-content: flex-start;
+            .p-wrapper{
+                width: 550px;
+                flex-basis: 550px;
+            }
         }
         .second-home-p{
            margin-right:0px;
@@ -54,8 +76,11 @@
     @include mq('tablet-wide'){
         
         .home-p{
-            margin:0px 10%;
-            margin-left:0px;
+            margin:0px;
+            .p-wrapper{
+                width: 650px;
+                flex-basis: 650px;
+            }
 
         }
         .second-home-p{
@@ -63,10 +88,15 @@
             margin-left:30%;
          }
     }
-    @include mq('desktop-wide'){
+    @include mq('desktop'){
         background-size: cover;
         .home-p{
             padding-top:15%;
+            padding-left:350px;
+        }
+        .p-wrapper{
+            width: 890px;
+            flex-basis: 890px;
         }
     }
     

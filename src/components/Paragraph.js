@@ -12,10 +12,7 @@ const Paragraph = (props) => {
       <Underlined
         marginLeft="-10%"
       >
-        <h1>
-          {' '}
-          {heading}
-        </h1>
+        {heading}
       </Underlined>
       <p>
         {children}

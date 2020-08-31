@@ -1,4 +1,4 @@
-@import '../app.scss';
+@import '../app';
 
 .App{
     position: relative;
@@ -27,7 +27,7 @@
     position: absolute; 
 
     left:20px; 
-    @include mq('phone-wide'){
+    @include mq('tablet'){
         display: initial;
     }
     
