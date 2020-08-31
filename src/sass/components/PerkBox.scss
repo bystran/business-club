@@ -1,0 +1,22 @@
+@import '../variables';
+@import '../mixins';
+
+
+.perk-box{
+    .perk-icon{
+        padding-left:21px;
+        padding-bottom:10px;
+        svg{
+            width: auto;
+            height: 30px;
+        }
+    }
+    h3.perk-heading{
+        border-left: 1px solid $accent-color;
+        padding-left: 20px;
+    }
+    p.perk-text{
+        padding-left: 21px;
+        margin-top: 15px;
+    }
+}

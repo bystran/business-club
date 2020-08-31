@@ -2,6 +2,10 @@ import React from 'react';
 import Paragraph from '../Paragraph';
 import '../../sass/sections/Home.scss';
 import LinkButton from '../LinkButton';
+import { ReactComponent as IndustryInsightIcon } from '../../assets/icons/industry_insight.svg';
+import { ReactComponent as WorkshopsIcon } from '../../assets/icons/workshops.svg';
+import { ReactComponent as InteractiveTalksIcon } from '../../assets/icons/interactive_talks.svg';
+import PerkBox from '../PerkBox';
 
 const Home = () => (
   <div className="section home">
@@ -41,18 +45,45 @@ const Home = () => (
     </div>
 
     <div className="home-p second-home-p">
+      <div className="p-wrapper">
+        <h1>What we do</h1>
+        <p>
+          As a member, you are invited to join one of the largest
+          academic societies on campus for its Industry Insight Programme.
+          This includes a series of interactive talks and workshops through
+          which students shall gain an insight into a particular industry
+          or type of career.
+        </p>
+      </div>
 
-      <Paragraph
-        darkMonde
-        heading="What we do"
+    </div>
+    <div className="perk-list">
+      <PerkBox
+        icon={<IndustryInsightIcon />}
+        heading="Industry insight"
       >
-        As a member, you are invited to join one of the largest
-        academic societies on campus for its Industry Insight Programme.
-        This includes a series of interactive talks and workshops through
-        which students shall gain an insight into a particular industry
-        or type of career.
+        Get a glimpse of what your future work might look like
+      </PerkBox>
+      <PerkBox
+        icon={<InteractiveTalksIcon />}
+        heading="Interactive talks"
+      >
+        Exchange ideas with industry experts and get inspired
+      </PerkBox>
+      <PerkBox
+        icon={<WorkshopsIcon />}
+        heading="Workshops"
+      >
+        Build up your skill set and boost your employability
+      </PerkBox>
 
-      </Paragraph>
+    </div>
+    <div className="last-home-btn">
+      <LinkButton
+        href="#"
+      >
+        See upcoming events
+      </LinkButton>
     </div>
 
   </div>
