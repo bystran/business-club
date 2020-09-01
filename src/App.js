@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import Vl from './components/VerticalLine';
 import Home from './components/sections/Home';
 import Events from './components/sections/Events';
+import Perks from './components/sections/Perks';
 import Members from './components/sections/Members';
 import { initMembers } from './reducers/memberReducer';
 import { initEvents } from './reducers/eventReducer';
@@ -55,6 +56,7 @@ function App(props) {
           ]}
 
         />
+        <Perks />
         <ScrollableSection name="team" meta={{ title: 'Team' }}>
           <div>
             <Members />
@@ -66,6 +68,7 @@ function App(props) {
             <JoinUs />
           </div>
         </ScrollableSection>
+        
 
       </div>
 

@@ -129,7 +129,7 @@
         background-size: cover;
         .home-p{
             padding-top:15%;
-            padding-left:350px;
+            padding-left:280px;
         }
         .p-wrapper{
             width: 890px;
@@ -150,7 +150,7 @@
             
         }
         .perk-list{
-            padding-left:370px;
+            padding-left:290px;
             align-items: baseline;
             justify-content: flex-start;
             .perk-box{
@@ -159,13 +159,13 @@
             }
         }
         .last-home-btn{
-            padding-left:350px;
+            padding-left:280px;
             padding-top: 70px;
         }
     }
     @include mq("desktop-wide"){
         .last-home-btn{
-            padding-left: 370px;
+            padding-left: 300px;
         }
         padding-bottom: 260px;
 

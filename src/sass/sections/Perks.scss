@@ -1,0 +1,47 @@
+@import '../variables';
+@import '../mixins';
+
+.section-perks{
+    width:85%;
+    margin:auto;
+    padding-top: 15%;
+    h1{
+        margin-bottom: 40px;
+    }
+    @include mq('tablet'){
+        width:100%;
+        padding-left: 130px;
+        padding-top: 70px;
+        padding-bottom: 70px;
+        .perk-list{
+            width: 100%;
+            display: flex;
+            align-items: baseline;
+            .perk-box{
+                width:210px;
+            }
+        }
+    }
+    @include mq('tablet-wide'){
+        padding-left: 200px;
+        padding-top:100px; 
+        padding-bottom: 120px; 
+        .perk-list{
+            padding-top:10px;
+            .perk-box{
+                width: 250px;
+            } 
+        }
+
+    }
+    @include mq('desktop'){
+        padding-left:280px;
+        .perk-list{
+            padding-top:15px;
+            .perk-box{
+                padding-right: 50px;
+
+            } 
+        }
+    }
+}
