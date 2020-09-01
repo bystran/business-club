@@ -1,3 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="29.24" height="29.244" viewBox="0 0 29.24 29.244">
-  <path id="close" d="M29.53,28.013,16.067,14.623,29.459,1.157A.678.678,0,1,0,28.5.2L15.108,13.665,1.644.272a.678.678,0,0,0-.957.962L14.149,14.623.758,28.088a.678.678,0,1,0,.962.957L15.109,15.582,28.57,28.974a.678.678,0,1,0,.957-.962Zm0,0" transform="translate(-0.487 0)" fill="#4dedff"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="21.361" height="21.361" viewBox="0 0 21.361 21.361">
+  <g id="Icon_feather-zoom-out" data-name="Icon feather-zoom-out" transform="translate(-3 -3)">
+    <path id="Path_29" data-name="Path 29" d="M20.269,12.384A7.884,7.884,0,1,1,12.384,4.5,7.884,7.884,0,0,1,20.269,12.384Z" fill="none" stroke="#f2f9ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <path id="Path_30" data-name="Path 30" d="M29.262,29.262l-4.287-4.287" transform="translate(-7.022 -7.022)" fill="none" stroke="#f2f9ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <path id="Path_31" data-name="Path 31" d="M12,16.5h5.913" transform="translate(-2.572 -4.116)" fill="none" stroke="#f2f9ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  </g>
 </svg>

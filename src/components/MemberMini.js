@@ -2,6 +2,7 @@
 import React from 'react';
 import BaseImg from '../assets/user.png';
 import '../sass/membermini.scss';
+import { ReactComponent as ZoomInIcon } from '../assets/icons/zoom_in.svg';
 
 const MemberMini = (props) => {
   const { name, img, position } = props;
@@ -27,8 +28,11 @@ const MemberMini = (props) => {
         />
       </div>
 
-      <h3>{name}</h3>
+      <h3>{name.split(' ')[0]}</h3>
       <h4>{position}</h4>
+      <div className="zoom-in-icon">
+        <ZoomInIcon />
+      </div>
     </div>
   );
 };

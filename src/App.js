@@ -68,7 +68,6 @@ function App(props) {
             <JoinUs />
           </div>
         </ScrollableSection>
-        
 
       </div>
 
