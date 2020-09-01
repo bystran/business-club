@@ -8,6 +8,7 @@ import Home from './components/sections/Home';
 import Events from './components/sections/Events';
 import Perks from './components/sections/Perks';
 import Members from './components/sections/Members';
+import ClubStats from './components/sections/ClubStats';
 import { initMembers } from './reducers/memberReducer';
 import { initEvents } from './reducers/eventReducer';
 import JoinUs from './components/sections/JoinUs';
@@ -22,7 +23,6 @@ function App(props) {
   return (
     <div className="App">
       <NavBar />
-
       <div className="sectionOneToThree">
         <Vl
           className="vl"
@@ -50,13 +50,12 @@ function App(props) {
           className="vl"
           color="#2C3E50"
           sections={[
-            { title: '04', top: '120px' },
-            { title: '05', top: '850px' },
 
           ]}
 
         />
         <Perks />
+        <ClubStats />
         <ScrollableSection name="team" meta={{ title: 'Team' }}>
           <div>
             <Members />

@@ -1,0 +1,116 @@
+@import '../variables';
+@import '../mixins';
+
+$deg : 4deg;
+.section-club-stats{
+  position: relative;
+  width: 100%;
+  .vl{
+    margin-top:10%;
+    height: 89.55% !important;
+    h3{
+      color:white !important;
+    }
+  }
+  .club-stats-bg{
+    #tsparticles{
+      height:100%;
+    }
+    margin-top: 0px;
+    background: $gradient-dark;
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    z-index:-1;
+    svg {
+      z-index: -10;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 10vw;
+      fill: white;
+    } 
+    .top-pol{
+      top:-1px;
+    }
+    .bot-pol{
+      bottom:-1px;
+    } 
+  }
+  .club-stats-content{ 
+    padding: 150px 7.5%;
+    .perk-box{
+      h2,h3,p{color:white !important;}
+    }
+    .perk-list{
+      padding-bottom: 20px;
+    }
+    .link-btn{
+      display: block;
+      margin-top: 20px;
+      width: min-content;
+    }
+    @include mq('tablet'){
+      width:83%;
+      padding-left: 130px;
+      p{
+        padding-bottom: 40px;
+      }
+      .perk-list{
+          width: 100%;
+          display: flex;
+          align-items: baseline;
+          .perk-box{
+              width:210px;
+              margin-right: 10px;
+          }
+      }
+      .link-btn{
+        display: inline;
+        margin-left: 20px;
+      }
+    }
+    @include mq('tablet-wide'){
+        width: 690px;
+        padding-left: 200px;
+        h1,p{
+          width: 550px;
+        }
+        .perk-list{
+            padding-top:10px;
+            .perk-box{
+                p{
+                  width: 100%;
+                }
+                width: 250px;
+            } 
+        }
+
+    }
+    @include mq('desktop'){
+        width: 1000px;
+        padding-top:280px;
+        padding-bottom: 280px;
+        padding-left:280px;
+        p,h1{
+          width: 600px;
+        }
+        .perk-list{
+            padding-top:15px;
+            .perk-box{
+                p{
+                  width: 100%;
+                }
+                padding-right: 50px;
+                width: 300px;
+
+            } 
+        }
+    }
+  }
+
+}   
+
+
