@@ -28,9 +28,8 @@ function App(props) {
           className="vl"
           color="#4DEDFF"
           sections={[
-            { title: '01', top: '20px' },
+            { title: '01', top: '0px' },
             { title: '02', top: '600px' },
-            { title: '03', top: '1050px' },
           ]}
         />
         <ScrollableSection name="about" meta={{ title: 'About' }}>
@@ -40,20 +39,22 @@ function App(props) {
 
         </ScrollableSection>
       </div>
-      <ScrollableSection name="events" meta={{ title: 'Events' }}>
-        <div>
-          <Events />
-        </div>
-      </ScrollableSection>
       <div className="sectionTwo">
         <Vl
           className="vl"
           color="#2C3E50"
           sections={[
-
+            { title: '03', top: '50px' },
+            { title: '04', top: '600px' },
+            { title: '06', top: '2150px' },
           ]}
 
         />
+        <ScrollableSection name="events" meta={{ title: 'Events' }}>
+          <div>
+            <Events />
+          </div>
+        </ScrollableSection>
         <Perks />
         <ClubStats />
         <ScrollableSection name="team" meta={{ title: 'Team' }}>

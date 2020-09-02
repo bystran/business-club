@@ -30,7 +30,7 @@ const JoinUs = () => (
       />
 
       <LinkButton
-        href="#"
+        href="https://docs.google.com/forms/d/e/1FAIpQLSdRtXrPrVj-kHcHt6UBaosvTzolbWm3bDrIi9SErYCTa8qYpg/viewform?usp=sf_link"
         background="#2980B9"
         color="white"
       >

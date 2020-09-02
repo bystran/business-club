@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReactComponent as CheckIcon} from '../assets/icons/check.svg';
+import { ReactComponent as CheckIcon } from '../assets/icons/check.svg';
 
 const BenefitList = (props) => {
   const { benefits } = props;

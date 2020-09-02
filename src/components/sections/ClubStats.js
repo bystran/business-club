@@ -30,13 +30,13 @@ const ClubStats = () => (
       <div className="perk-list">
         <PerkBox
           icon={<></>}
-          heading="130+ members"
+          heading="150+ members"
         >
           We are one of the largest academic societies on campus
         </PerkBox>
         <PerkBox
           icon={<></>}
-          heading="22 nationalities"
+          heading="30 nationalities"
         >
           Network with students from over 22 countries
         </PerkBox>
@@ -48,11 +48,11 @@ const ClubStats = () => (
         </PerkBox>
 
       </div>
-      <LinkButton href="#">
+      <LinkButton href="/join">
         Join the Club
       </LinkButton>
       <LinkButton
-        href="#"
+        href="https://www.facebook.com/gubusinessclub"
         color="white"
         background="rgba(44, 62, 80, 0.75)"
       >
