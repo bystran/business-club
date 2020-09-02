@@ -1,11 +1,12 @@
 import React from 'react';
 import Paragraph from '../Paragraph';
-import '../../sass/sections/Home.scss';
 import LinkButton from '../LinkButton';
 import { ReactComponent as IndustryInsightIcon } from '../../assets/icons/industry_insight.svg';
 import { ReactComponent as WorkshopsIcon } from '../../assets/icons/workshops.svg';
 import { ReactComponent as InteractiveTalksIcon } from '../../assets/icons/interactive_talks.svg';
 import PerkBox from '../PerkBox';
+
+import '../../sass/sections/Home.scss';
 
 const Home = () => (
   <div className="section home">
