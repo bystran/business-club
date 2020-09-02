@@ -10,3 +10,19 @@
     height: 0px;
     overflow: hidden;
 }
+.link-btn{
+    border-radius: 16.5px;
+    background: #4dedff;
+    display: inline;
+    font-size: 16px;
+    color:#2C3E50;
+    text-decoration:none;
+    white-space: nowrap;
+    padding:2px 33px;
+}
+.inverse-accent-color{
+    color: $inverse-accent-color !important;
+}
+.white{
+    color: white !important;
+}

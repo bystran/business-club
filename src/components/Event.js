@@ -10,20 +10,21 @@ const Event = (props) => {
 
   return (
 
-    <button
-      herf={`https://facebook.com/events/${event.id}`}
-      className="event"
-      type="button"
-    >
+    <div className="event">
       <div className="month-year">
+        {date.getDate()}
+        {', '}
         {month}
-        ,
         {' '}
         {date.getFullYear()}
       </div>
-      <div className="event-day">{date.getDate()}</div>
       <div style={{ margin: '0px auto' }} className="event-name">{event.name}</div>
-    </button>
+      <a
+        href={`https://facebook.com/events/${event.id}`}
+      >
+        see event
+      </a>
+    </div>
 
   );
 };

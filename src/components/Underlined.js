@@ -2,9 +2,10 @@ import React from 'react';
 import '../sass/underlined.scss';
 
 const Underlined = (props) => {
-  const { marginLeft, children } = props;
+  const { marginLeft, children, lineColor } = props;
   const style = {
     marginLeft,
+    borderTopColor: lineColor,
   };
 
   return (

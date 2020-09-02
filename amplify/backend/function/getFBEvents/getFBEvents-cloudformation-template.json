@@ -63,7 +63,7 @@
 				"Timeout": "25",
 				"Code": {
 					"S3Bucket": "amplify-business-club-dev-84758-deployment",
-					"S3Key": "amplify-builds/getFBEvents-68516771346867685a4e-build.zip"
+					"S3Key": "amplify-builds/getFBEvents-756f5a49743675656976-build.zip"
 				}
 			}
 		},

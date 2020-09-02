@@ -1,0 +1,5 @@
+{
+    "tableName": "clubMembers",
+    "partitionKeyName": "guid",
+    "partitionKeyType": "S"
+}

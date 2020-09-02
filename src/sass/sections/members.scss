@@ -1,4 +1,5 @@
-@import '../app';
+@import '../variables';
+@import '../mixins';
 
 .members-section{
     position: relative;
@@ -17,24 +18,24 @@
         }
     }
     .members-container{
-        padding-top:20%;
-        display: flex;
-        flex-wrap: wrap;
-        margin:0px auto;
-        width: 240px;
-        @include mq('phone-wide'){
-            padding-top:7%;
-            width: 360px;
-        }
-        @include mq('tablet-small'){
-            padding-top:5%;
-            width: 480px;
+        margin: auto;
+        padding: 20px;
+        width: 80%;
+
+        @include mq('tablet'){
+            width:90%;
         }
         @include mq('tablet-wide'){
-            width: 600px;
+            width: 800px;
         }
         @include mq('desktop'){
-            width: 720px;
+            width: 1000px;
+        }
+        .slick-list{
+            padding-top:30px !important;
+        }
+        .slick-prev:before, .slick-next:before { 
+            color: $inverse-color !important;
         }
     }
     .circle-img-cropper{
@@ -54,20 +55,7 @@
         }
     
     }
-    .member-card-holder{
-        position: fixed;
-        top:0px;
-        left:0px;
-        display: flex;
-        height: 100vh;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        @include mq('phone-wide'){
-            position: absolute
-        }
-        z-index: 2;
-    }
+
     @include mq('phone-wide'){
         padding-top:5%;
     }

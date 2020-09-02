@@ -1,4 +1,6 @@
-@import '../app.scss';
+@import '../variables';
+@import '../mixins';
+
 
 
 .home{
@@ -8,14 +10,45 @@
     min-height: 100vh;
     width: 100%;
     display: flex;
+    padding-bottom:150px;
     justify-content: center;
     flex-wrap: wrap;
     align-items: flex-start;
     align-content: flex-start;
     .home-p{
         display: flex;
-        justify-content: center;;
-        padding-top:30%;
+        justify-content: center;
+        padding-top:60%;
+        .p-wrapper{
+            width:85%;
+            flex-basis: 85%;
+        }
+    }
+    .link-btn{
+        display: block;
+        width:max-content;
+        margin:20px 0px;
+    }
+    .second-home-p{
+        h1{
+            flex-basis:100%;
+            display:block;
+            width: 100%;;
+        }
+        p{
+            width: 100%;
+            font-size:16px;
+            line-height: 1.6em;
+            padding:20px 0px;
+        }
+    }
+    .perk-list{
+        padding-left:10px;
+    }
+    .last-home-btn{
+        width:100%;
+        padding-left:25px;
+        padding-top: 20px;
     }
     @include mq('phone'){
         .home-p{
@@ -24,50 +57,118 @@
         .second-home-p{
             padding-top: 25%;
         }
+        .perk-list{
+            flex-basis:85%;
+            padding:0px;
+            .perk-box{
+                width: 302px;
+            }
+        }
+        .last-home-btn{
+            flex-basis: 85%;
+        }
     }
     @include mq('phone-wide'){
         min-height: auto !important;
         .home-p{
             padding-top:20%;
+        }
+        .link-btn{
+            display: inline-block;
+            margin:20px 0px;
+            margin-right:20px;
+        }
 
-        }
-        .second-home-p{
-            justify-content: flex-end;
-            padding-right:15%;
-        }
 
     }
     @include mq('tablet'){
         background-size: contain;
         background-position: center -200px;
+
     
         .home-p{
-            padding-top:20%;
-            margin:0px 10%;
+            width: 100%;
+            flex-basis:100%;
+            padding-left:200px;
+            justify-content: flex-start;
+            .p-wrapper{
+                width: 550px;
+                flex-basis: 550px;
+            }
         }
-        .second-home-p{
-           margin-right:0px;
-           margin-left:20%;
+        .perk-list{
+            display:flex;
+            align-items: baseline;
+            justify-content: center;
+            padding-top:60px;
+            padding-left: 60px;
+            .perk-box{
+                flex-basis: 230px;
+            }
+        }
+        .last-home-btn{
+            width: 100%;
+            flex-basis:100%;
+            padding-left:200px;
+            padding-top: 30px;
         }
 
     }
     @include mq('tablet-wide'){
         
         .home-p{
-            margin:0px 10%;
-            margin-left:0px;
+            margin:0px;
+            .p-wrapper{
+                width: 650px;
+                flex-basis: 650px;
+            }
 
         }
-        .second-home-p{
-            margin:0px;
-            margin-left:30%;
-         }
     }
-    @include mq('desktop-wide'){
+    @include mq('desktop'){
         background-size: cover;
         .home-p{
             padding-top:15%;
+            padding-left:280px;
         }
+        .p-wrapper{
+            width: 890px;
+            flex-basis: 890px;
+        }
+        .second-home-p{
+            .p-wrapper{
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                width: 890px;
+                flex-basis: 890px;
+                h1{
+                    flex-basis: 439px;
+                    padding-right: 89px;
+                }
+            }
+            
+        }
+        .perk-list{
+            padding-left:290px;
+            align-items: baseline;
+            justify-content: flex-start;
+            .perk-box{
+                flex-basis: 260px;
+                padding-right: 50px;
+            }
+        }
+        .last-home-btn{
+            padding-left:280px;
+            padding-top: 70px;
+        }
+    }
+    @include mq("desktop-wide"){
+        .last-home-btn{
+            padding-left: 300px;
+        }
+        padding-bottom: 260px;
+
     }
     
 

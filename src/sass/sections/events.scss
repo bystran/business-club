@@ -1,19 +1,49 @@
-@import '../app.scss';
+@import '../variables';
+@import '../mixins';
 
 
 .events-section{
-    padding-top:10%;
+
+    padding-top:80px;
     padding-bottom:10%;
     .events-heading{
+        width: 85%;
         margin:auto;
-        width: 200px;
         text-align: center;
+        h1{
+            color: $inverse-color;   
+        }
+        @include mq('phone'){
+            padding-bottom: 20px;
+        }
+        @include mq('tablet'){
+            width: 100%;
+            flex-basis:100%;
+            padding-left:200px;
+            padding-bottom: 40px;
+        }
+        @include mq('desktop'){
+            padding-left:280px;
+        }
         
     }
     .events{
-        padding-top:5%;
-        display: flex;
-        justify-content: center;
-        flex-flow: row wrap;
+        margin: auto;
+        padding: 20px;
+        width: 80%;
+
+        @include mq('tablet'){
+            width:90%;
+        }
+        @include mq('desktop'){
+            width: 1000px;
+        }
+    }
+    .slick-slider{
+        position:relative;
+    }
+
+    .slick-prev:before, .slick-next:before { 
+        color: $inverse-color !important;
     }
 }

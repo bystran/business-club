@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Slider from 'react-slick';
 import Underlined from '../Underlined';
 import { initMembers } from '../../reducers/memberReducer';
 import MemberMini from '../MemberMini';
@@ -67,16 +68,66 @@ const Members = (props) => {
     },
 
   ];
+  const settings = {
+    dots: true,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 5,
+    infinite: true,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          centerMode: true,
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          centerMode: true,
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          centerMode: true,
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          centerMode: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ],
+  };
 
   return (
     <div className="members-section">
-      <Underlined>
+      <Underlined
+        lineColor="#2980b9"
+      >
         {' '}
         <h1>Our Team</h1>
         {' '}
       </Underlined>
       <div className="members-container">
-        {
+        { /* eslint-disable-next-line react/jsx-props-no-spreading */ }
+        <Slider {...settings}>
+          {
                     members.map((m) => (
                       <MemberMini
                         key={m.id}
@@ -86,7 +137,9 @@ const Members = (props) => {
                         onClick={() => { props.showMembCard(m); }}
                       />
                     ))
-                }
+          }
+        </Slider>
+
       </div>
       {
                 memberCard !== null

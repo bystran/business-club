@@ -5,8 +5,10 @@ import NavBar from './components/Navbar';
 import Footer from './components/Footer';
 import Vl from './components/VerticalLine';
 import Home from './components/sections/Home';
-import Events from './sections/Events';
+import Events from './components/sections/Events';
+import Perks from './components/sections/Perks';
 import Members from './components/sections/Members';
+import ClubStats from './components/sections/ClubStats';
 import { initMembers } from './reducers/memberReducer';
 import { initEvents } from './reducers/eventReducer';
 import JoinUs from './components/sections/JoinUs';
@@ -21,15 +23,13 @@ function App(props) {
   return (
     <div className="App">
       <NavBar />
-
       <div className="sectionOneToThree">
         <Vl
           className="vl"
           color="#4DEDFF"
           sections={[
-            { title: '01', top: '20px' },
+            { title: '01', top: '0px' },
             { title: '02', top: '600px' },
-            { title: '03', top: '1050px' },
           ]}
         />
         <ScrollableSection name="about" meta={{ title: 'About' }}>
@@ -38,25 +38,25 @@ function App(props) {
           </div>
 
         </ScrollableSection>
-
-        <ScrollableSection name="events" meta={{ title: 'Events' }}>
-          <div>
-            <Events />
-          </div>
-        </ScrollableSection>
-
       </div>
       <div className="sectionTwo">
         <Vl
           className="vl"
           color="#2C3E50"
           sections={[
-            { title: '04', top: '120px' },
-            { title: '05', top: '850px' },
-
+            { title: '03', top: '50px' },
+            { title: '04', top: '600px' },
+            { title: '06', top: '2150px' },
           ]}
 
         />
+        <ScrollableSection name="events" meta={{ title: 'Events' }}>
+          <div>
+            <Events />
+          </div>
+        </ScrollableSection>
+        <Perks />
+        <ClubStats />
         <ScrollableSection name="team" meta={{ title: 'Team' }}>
           <div>
             <Members />

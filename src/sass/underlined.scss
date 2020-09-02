@@ -1,5 +1,5 @@
-@import './app';
-
+@import 'variables';
+@import 'mixins';
 
 
 .underlined-cmp{
@@ -9,5 +9,7 @@
     }
     hr{
         width: 50%;
+        border:0px;
+        border-top: 2px solid $accent-color;
     }
 }

@@ -16,7 +16,7 @@ body, html{
 
 h1,h2,h3,h4,h5 {
     font-family: 'Roboto', 'sans-serif';
-
+    margin:0px;
     color: $primary-color;
 }
 
@@ -26,17 +26,27 @@ hr{
     
 }
 h1{
-    font-size: 25px;
+    font-size: 30px;
     @include mq('phone-wide'){
-        font-size: 25px;
+        font-size: 40px;
     }
     @include mq('tablet'){
-        font-size: 35px;
+        font-size: 45px;
     }
-    @include mq('tablet-wide'){
-        font-size:40px;  
+}
+h2{
+    font-size:16px;
+    font-weight: normal;
+    @include mq('tablet'){
+        font-size:22px;
     }
-    @include mq('desktop-wide'){
-        font-size:50px;
-    }
+}
+h3{
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+h4{
+    font-size:16px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
 }
