@@ -1,5 +1,4 @@
 import React from 'react';
-import LinkButton from '../LinkButton';
 import BenefitList from '../BenefitList';
 import '../../sass/sections/JoinUs.scss';
 
@@ -29,13 +28,16 @@ const JoinUs = () => (
         ]}
       />
 
-      <LinkButton
+      <a
+        className="link-btn"
         href="https://docs.google.com/forms/d/e/1FAIpQLSdRtXrPrVj-kHcHt6UBaosvTzolbWm3bDrIi9SErYCTa8qYpg/viewform?usp=sf_link"
-        background="#2980B9"
-        color="white"
+        style={{
+          background: '#2980B9',
+          color: 'white',
+        }}
       >
         Apply
-      </LinkButton>
+      </a>
     </div>
   </div>
 );
