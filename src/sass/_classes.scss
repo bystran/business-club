@@ -10,7 +10,11 @@
     height: 0px;
     overflow: hidden;
 }
+.past{
+    filter: grayscale(1);
+}
 .link-btn{
+    transition: all .1s;
     border-radius: 16.5px;
     background: #4dedff;
     display: inline;
@@ -19,6 +23,11 @@
     text-decoration:none;
     white-space: nowrap;
     padding:2px 33px;
+    &:hover{
+        padding:2px 40px;
+        -webkit-filter: grayscale(100%)saturate(0%);
+        filter: grayscale(100%) saturate(0%);
+    }
 }
 .inverse-accent-color{
     color: $inverse-accent-color !important;

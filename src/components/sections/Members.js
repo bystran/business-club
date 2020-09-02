@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Slider from 'react-slick';
 import Underlined from '../Underlined';
 import { initMembers } from '../../reducers/memberReducer';
 import MemberMini from '../MemberMini';
@@ -42,6 +41,17 @@ const Members = (props) => {
     },
     {
       id: 4,
+      name: 'Ahmad Khashawi',
+      img: 'ahmad.jpg',
+      position: 'Event Coordinator',
+      degree: 'MA (Hons) Business and Management',
+      li: 'ahmad-khashawi-918844189',
+      in: 'ahmadkhashawi',
+      fb: 'ahmad.khashawi',
+      text: 'As the events coordinator of the board, my job is to organize and monitor events that take place under the GUBC. This includes looking for venues, talking to people in charge of said venues, and arranging a date, time and price. On the board of the GUBC, I have learnt how to cooperate with the different board members and integrate different members jobs with mine to ensure a successful event.',
+    },
+    {
+      id: 5,
       name: 'Mara Parapau',
       img: 'profile.jpeg',
       position: 'Marketing',
@@ -49,7 +59,7 @@ const Members = (props) => {
       text: '',
     },
     {
-      id: 5,
+      id: 6,
       name: 'Nina',
       img: 'profile.jpeg',
       position: 'Treasurer',
@@ -57,7 +67,7 @@ const Members = (props) => {
       text: '',
     },
     {
-      id: 6,
+      id: 7,
       name: 'Adam Bystran',
       img: 'io.jfif',
       position: 'Technical officer',
@@ -68,53 +78,6 @@ const Members = (props) => {
     },
 
   ];
-  const settings = {
-    dots: true,
-    speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 5,
-    infinite: true,
-    responsive: [
-      {
-        breakpoint: 1200,
-        settings: {
-          centerMode: true,
-          slidesToShow: 4,
-          slidesToScroll: 4,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          centerMode: true,
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          centerMode: true,
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          centerMode: true,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
-    ],
-  };
-
   return (
     <div className="members-section">
       <Underlined
@@ -126,8 +89,7 @@ const Members = (props) => {
       </Underlined>
       <div className="members-container">
         { /* eslint-disable-next-line react/jsx-props-no-spreading */ }
-        <Slider {...settings}>
-          {
+        {
                     members.map((m) => (
                       <MemberMini
                         key={m.id}
@@ -138,7 +100,6 @@ const Members = (props) => {
                       />
                     ))
           }
-        </Slider>
 
       </div>
       {

@@ -18,24 +18,26 @@
         }
     }
     .members-container{
-        margin: auto;
-        padding: 20px;
-        width: 80%;
-
+        padding-top:30px;
+        width: 320px;
+        margin:auto;
+        display:flex;
+        flex-wrap: wrap;
+        
+        .member-small{
+            margin:20px 5px;
+        }
+        @include mq('phone-wide'){
+            width:480px;
+        }
         @include mq('tablet'){
-            width:90%;
+            width:640px;
         }
         @include mq('tablet-wide'){
             width: 800px;
         }
         @include mq('desktop'){
-            width: 1000px;
-        }
-        .slick-list{
-            padding-top:30px !important;
-        }
-        .slick-prev:before, .slick-next:before { 
-            color: $inverse-color !important;
+            width: 1120px;
         }
     }
     .circle-img-cropper{

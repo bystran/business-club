@@ -53,7 +53,7 @@ const Events = (props) => {
           lineColor="#2980b9"
           marginLeft="10px"
         >
-          <h1>Upcoming events</h1>
+          <h1>Club Events</h1>
         </Underlined>
       </div>
 

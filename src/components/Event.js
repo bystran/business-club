@@ -10,7 +10,7 @@ const Event = (props) => {
 
   return (
 
-    <div className="event">
+    <div className={`event ${date < new Date(Date.now()) ? 'past' : ''}`}>
       <div className="month-year">
         {date.getDate()}
         {', '}

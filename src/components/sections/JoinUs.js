@@ -11,7 +11,7 @@ const JoinUs = () => (
     </div>
 
     <div className="become-member-card">
-      <h1>Become member</h1>
+      <h1>Become a member</h1>
       <p>
         Are you keen to develop your personal and professional skills while learning about the
         current trends in a variety of business sectors?
