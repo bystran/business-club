@@ -3,26 +3,83 @@
 
 
 .join-us-container{
-    padding:30% 0px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-    .underlined-cmp{
-        margin:0px !important; 
-        width: initial;
-        hr{
-            margin: 0px auto !important;
+    padding: 100px 0px;
+    position: relative;
+    @include mq("tablet"){
+        padding: 190px 0px;
+    }
+    .join-us-banner{
+        background: url(../../assets/join_us.jpg);
+        background-position: center center;
+        background-size: 200%;
+        background-repeat: no-repeat;
+        padding:200px 7.5%;
+        width: 100%;
+        @include mq("phone-wide"){
+            background-size: 150%;
+            padding:100px 7.5%;
+        }
+        @include mq('tablet'){
+            h1, p{
+                width:43%;
+            }
+            h1{
+                font-size: 33px;
+            }
+        }
+        @include mq("desktop"){
+            padding: 190px 10%;
+            background-size: cover;
         }
     }
-    h1{
-        text-align: center;
-    }
-    .form{
-        text-align: left;
-        width: max-content ;
-    }
-    @include mq('tablet'){
-        padding:10% 0px;
+    .become-member-card{
+        background: #121920;
+        h1, p, .benefit-list {color: rgba(255,255,255,0.7) !important;}
+
+        width:75%;
+        margin:auto;
+        margin-top: -130px;
+        padding: 40px 30px;
+        border-radius: 12px;
+        h1 {
+            text-align: center;
+            padding-bottom: 15px;
+        }
+        .link-btn{
+            display:block;
+            margin:auto;
+            width: 90px;
+            text-align: center;
+        }
+        .benefit-list{
+            padding-top: 10px;
+            padding-bottom: 50px;
+            .benefit{
+                padding-left: 5px;
+                padding-top: 15px;
+                svg{
+                    height:15px;
+                    width: auto;
+                    padding-right: 20px;
+                }
+            }
+        }
+        @include mq("phone-wide"){
+            margin-top: -80px;
+            width: 320px;
+            h1{
+                font-size: 29px;
+            }
+        }
+        @include mq("tablet"){ 
+            width: 280px;
+            position: absolute; 
+            top:160px;
+            right: 20px;
+        }
+        @include mq("desktop"){
+            right: 180px;
+            top: 235px
+        }
     }
 }
