@@ -53,15 +53,15 @@ const Members = (props) => {
     {
       id: 5,
       name: 'Mara Parapau',
-      img: 'profile.jpeg',
+      img: 'mara.jpg',
       position: 'Marketing',
       degree: 'Ba. Marketing',
       text: '',
     },
     {
       id: 6,
-      name: 'Nina',
-      img: 'profile.jpeg',
+      name: 'Nina Damjanović',
+      img: 'nina.png',
       position: 'Treasurer',
       degree: '',
       text: '',
