@@ -19,7 +19,7 @@ const Members = (props) => {
       degree: 'Business and Management with Economics',
       in: 'alexandraspiriakova',
       li: 'alexandra-špiriaková-288174156',
-      text: 'Hi! My name is Alexandra and I am a third-year Economics and Business student. I have joined the board in my first year, and since then, it has been an amazing, invaluable experience. I have pursued my interests outside the academic context, developed soft skills, deepened knowledge, but most importantly, met wonderful, very inspirational people. For me, joining the society and getting involved has been definitely worth it!',
+      text: 'Hi! My name is Alexandra and I am a fourth-year Economics and Business student. I have joined the board in my first year, and since then, it has been an amazing, invaluable experience. I have pursued my interests outside the academic context, developed soft skills, deepened knowledge, but most importantly, met wonderful, very inspirational people. For me, joining the society and getting involved has been definitely worth it!',
     },
     {
       id: 2,
@@ -27,7 +27,7 @@ const Members = (props) => {
       img: 'vp.jpg',
       position: 'Vice President',
       degree: 'Ba. Business and Managemen',
-      text: 'My name is Elena Spartali and I am a 3rd Year Business and Management Honours Student. My role as Events Manager on the University of Glasgow Business Club have made me gain numerous of skills that they will definitely help me in my future career. I have developed my communication and organisation skills to a great extent, as I have been in contact with many business professionals from dynamic backgrounds of the field. That has given me the opportunity to network and connect with valuable people from well-known companies in the UK. More specifically, my participation in the Club involves Panel Discussion and Field Trip events of forty to fifty persons, as well as responsibilities about the venues, catering and funding.',
+      text: 'My name is Elena Spartali and I am a 4th Year Business and Management Honours Student. My role as Events Manager on the University of Glasgow Business Club have made me gain numerous of skills that they will definitely help me in my future career. I have developed my communication and organisation skills to a great extent, as I have been in contact with many business professionals from dynamic backgrounds of the field. That has given me the opportunity to network and connect with valuable people from well-known companies in the UK. More specifically, my participation in the Club involves Panel Discussion and Field Trip events of forty to fifty persons, as well as responsibilities about the venues, catering and funding.',
     },
     {
       id: 3,
