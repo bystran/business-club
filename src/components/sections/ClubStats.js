@@ -49,7 +49,7 @@ const ClubStats = () => (
         Join the Club
       </LinkButton>
       <LinkButton
-        href="https://www.facebook.com/gubusinessclub"
+        href="/team"
         color="white"
         background="rgba(44, 62, 80, 0.75)"
       >
