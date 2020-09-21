@@ -61,22 +61,11 @@ const Members = (props) => {
     {
       id: 6,
       name: 'Nina Damjanović',
-      img: 'nina.png',
+      img: 'nina.jpg',
       position: 'Treasurer',
       degree: '',
       text: '',
     },
-    {
-      id: 7,
-      name: 'Adam Bystran',
-      img: 'io.jfif',
-      position: 'Technical officer',
-      degree: 'Msc. Software engineering',
-      li: 'adam-bystran',
-      in: 'a.bystran',
-      text: "Being the IT consultant for Business Club has imparted great communication skills in me and put my technical expertise to test as I worked on the club's website. In general, it has been an incredible experience; - working with like-minded people and getting to know how a university club is run.",
-    },
-
   ];
   return (
     <div className="members-section">

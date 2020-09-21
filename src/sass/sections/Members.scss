@@ -37,6 +37,7 @@
             width: 800px;
         }
         @include mq('desktop'){
+            justify-content: center;
             width: 1120px;
         }
     }
