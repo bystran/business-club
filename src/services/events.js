@@ -6,7 +6,7 @@ const getEvents = async () => {
   try {
     const res = await axios.get(baseUrl, {
     });
-    return res.data;
+    return JSON.parse(res.data.body);
   } catch (e) {
     return { error: 'Something went wrong' };
   }
