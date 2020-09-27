@@ -55,16 +55,16 @@ const Members = (props) => {
       name: 'Mara Parapau',
       img: 'mara.jpg',
       position: 'Marketing',
-      degree: 'Ba. Marketing',
-      text: '',
+      degree: 'Computing Science/Business & Management',
+      text: 'Hey! My name is Mara and I am a 2nd year Computing Science/Business & Management Student.  I have decided to join the board of the GU Business club in order to contribute to the process of creating engaging development opportunities for people interested in business, whilst gaining experience in this field and meeting inspiring people along the way! As a Marketing Executive, my goal is to bring the events closer to our members and make them accesible for anyone wishing to participate! I am excitedly looking forward to my journey in the board of the Business Club!',
     },
     {
       id: 6,
       name: 'Nina Damjanović',
       img: 'nina.jpg',
       position: 'Treasurer',
-      degree: '',
-      text: '',
+      degree: 'Economics',
+      text: 'Hi! My name is Nina and I am a second-year Economics student. I have joined the Business club in my first year as a first year representative and am now the treasurer of the club. Being a member of Business club has been an amazing opportunity that allowed me to expand my knowledge and develop skills about different topics alongside being able to network and meet people with real experience of working in the field.',
     },
   ];
   return (
