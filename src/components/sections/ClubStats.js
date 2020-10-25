@@ -35,13 +35,13 @@ const ClubStats = () => (
           icon={<></>}
           heading="30 nationalities"
         >
-          Network with students from over 22 countries
+          Network with students from over 30 countries
         </PerkBox>
         <PerkBox
           icon={<></>}
           heading="22+ successful events"
         >
-          We have organized over 20 professional events
+          We have organized over 22+ professional events
         </PerkBox>
 
       </div>
