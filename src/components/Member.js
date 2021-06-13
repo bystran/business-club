@@ -24,7 +24,7 @@ const Member = (props) => {
       <div className="circle-img-cropper">
         <img
           // eslint-disable-next-line global-require
-          src={require(`../assets/${member.img}`)}
+          src={member.photo_url}
           alt="profile img"
         />
       </div>
@@ -32,14 +32,15 @@ const Member = (props) => {
       <h4>{member.position}</h4>
       <div className="member-bio">
         <h5>{member.degree}</h5>
-        <p>{member.text}</p>
+        <p>{member.bio}</p>
       </div>
       <div className="icon-row">
         <div className="icons-container">
           {
-                        member.in
+                        member.instagram_url
                         && (
-                        <a href={`https://www.instagram.com/${member.in}`}>
+                        // eslint-disable-next-line react/jsx-no-target-blank
+                        <a target="_blank" href={member.linkedin_url}>
                           <Insta />
                         </a>
                         )
@@ -47,17 +48,19 @@ const Member = (props) => {
                     }
 
           {
-                        member.li
+                        member.linkedin_url
                         && (
-                        <a href={`https://www.linkedin.com/in/${member.li}`}>
+                        // eslint-disable-next-line react/jsx-no-target-blank
+                        <a target="_blank" href={member.linkedin_url}>
                           <Linkedin />
                         </a>
                         )
                     }
           {
-                        member.fb
+                        member.facebook_url
                         && (
-                        <a href={`https://www.faceboook.com/${member.fb}`}>
+                        // eslint-disable-next-line react/jsx-no-target-blank
+                        <a target="_blank" href={member.facebook_url}>
                           <Fb />
                         </a>
                         )

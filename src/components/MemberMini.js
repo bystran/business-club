@@ -22,7 +22,7 @@ const MemberMini = (props) => {
       <div className="circle-img-cropper">
         <img
           // eslint-disable-next-line global-require
-          src={require(`../assets/${img}`)}
+          src={img}
           alt="profile img"
           onError={handleEroror}
         />
