@@ -1,15 +1,13 @@
-import axios from 'axios';
+import { API } from 'aws-amplify';
 
-const baseUrl = 'https://uee5zunrv2.execute-api.eu-west-2.amazonaws.com/default/getFBEvents-dev';
+const getEvents = () => {
+  const apiName = 'FacebookEventsApi';
+  const path = '/events';
+  const myInit = { // OPTIONAL
+    headers: {}, // OPTIONAL
+  };
 
-const getEvents = async () => {
-  try {
-    const res = await axios.get(baseUrl, {
-    });
-    return JSON.parse(res.data.body);
-  } catch (e) {
-    return { error: 'Something went wrong' };
-  }
+  return API.get(apiName, path, myInit);
 };
 
 export default {

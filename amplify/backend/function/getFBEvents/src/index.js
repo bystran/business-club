@@ -2,16 +2,15 @@
 
 exports.handler = async (event) => {
     const headers= {
-        "Access-Control-Allow-Origin": "http://localhost:3000"
+        "Access-Control-Allow-Origin": process.env.BASE_URL
     }
     try{
         const axios = require('axios')
         const params = {
-            access_token: process.env.FB_KEY,
+            access_token: process.env.AMPLIFY_FB_ACCESS_TOKEN,
             fields: 'name, start_time',
-            time_filter:'upcoming'
         }
-        const base_url = "https://graph.facebook.com/v6.0/"+process.env.PAGE_ID+"/events"
+        const base_url = "https://graph.facebook.com/v6.0/"+process.env.AMPLIFY_FB_PAGE_ID+"/events"
 
     
 

@@ -3,28 +3,22 @@
     "Description": "API Gateway resource stack creation using Amplify CLI",
     
     "Parameters": {
-        "authRoleName": {
-            "Type":  "String"
-        },
-        "unauthRoleName": {
-            "Type":  "String"
-        },
         "env": {
             "Type": "String"
         },
     
     
-          "functionclubMemberLambdaName": {
+          "functiongetFBEventsName": {
             "Type": "String",
-            "Default": "functionclubMemberLambdaName"
+            "Default": "functiongetFBEventsName"
           },
-        
+
           
-          "functionclubMemberLambdaArn": {
+          "functiongetFBEventsArn": {
             "Type": "String",
-            "Default": "functionclubMemberLambdaArn"
+            "Default": "functiongetFBEventsArn"
           }
-        
+
           
           
     
@@ -43,18 +37,16 @@
         
         
         
-        
-        
-      "clubMember": {
+      "FacebookEventsApi": {
         "Type": "AWS::ApiGateway::RestApi",
         "Properties": {
           "Description": "",
-          "Name": "clubMember",
+          "Name": "FacebookEventsApi",
           "Body": {
             "swagger": "2.0",
             "info": {
               "version": "2018-05-24T17:52:00Z",
-              "title": "clubMember"
+              "title": "FacebookEventsApi"
             },
             "host": {
                 "Fn::Join": [
@@ -82,7 +74,7 @@
                           }
                       ]
                   ]
-                } 
+                }
               ]
             },
             "schemes": [
@@ -90,7 +82,7 @@
             ],
             "paths": {
               
-              "/club-member": {
+              "/events": {
                 "options": {
                   "consumes": [
                     "application/json"
@@ -157,6 +149,12 @@
                       }
                     }
                   },
+                  
+                    "security": [
+                        {
+                          "sigv4": []
+                        }
+                      ],
                   
                   "x-amazon-apigateway-integration": {
                     "responses": {
@@ -175,8 +173,8 @@
                             ":lambda:path/2015-03-31/functions/",
                             
                             {
-                                
-                                "Ref": "functionclubMemberLambdaArn"
+
+                                "Ref": "functiongetFBEventsArn"
                             },
                             
                             "/invocations"
@@ -189,7 +187,7 @@
                   }
                 }
               },
-              "/club-member/{proxy+}": {
+              "/events/{proxy+}": {
                 "options": {
                   "consumes": [
                     "application/json"
@@ -257,6 +255,12 @@
                     }
                   },
                   
+                    "security": [
+                        {
+                          "sigv4": []
+                        }
+                      ],
+                  
                   "x-amazon-apigateway-integration": {
                     "responses": {
                       "default": {
@@ -274,8 +278,8 @@
                           ":lambda:path/2015-03-31/functions/",
                           
                           {
-                            
-                            "Ref": "functionclubMemberLambdaArn"
+
+                            "Ref": "functiongetFBEventsArn"
                           },
                           
                           "/invocations"
@@ -287,7 +291,7 @@
                     "type": "aws_proxy"
                   }
                 }
-              }   
+              }
               
             },
             "securityDefinitions": {
@@ -329,15 +333,15 @@
         }
       },
 
-                  
+      
         
-        
-        "functionclubMemberLambdaPermissionclubMember": {
+
+        "functiongetFBEventsPermissionFacebookEventsApi": {
             "Type": "AWS::Lambda::Permission",
             "Properties": {
                 "FunctionName": 
                     {
-                        "Ref":  "functionclubMemberLambdaName"
+                        "Ref":  "functiongetFBEventsName"
                     },
                     
                     "Action": "lambda:InvokeFunction",
@@ -356,7 +360,7 @@
                             },
                             ":",
                             {
-                                "Ref": "clubMember"
+                                "Ref": "FacebookEventsApi"
                             },
                             "/*/*/*"
                         ]
@@ -366,22 +370,22 @@
         },
         
         
-        
-      "DeploymentAPIGWclubMember": {
+
+      "DeploymentAPIGWFacebookEventsApi": {
         "Type": "AWS::ApiGateway::Deployment",
         "Properties": {
           "Description": "The Development stage deployment of your API.",
           "StageName": {
             "Fn::If": [
               "ShouldNotCreateEnvResources",
-              "Prod", 
+              "Prod",
               {
                 "Ref": "env"
-              } 
+              }
             ]
           },
           "RestApiId": {
-            "Ref": "clubMember"
+            "Ref": "FacebookEventsApi"
           }
         }
       }
@@ -389,15 +393,15 @@
     "Outputs": {
         "RootUrl": {
             "Description": "Root URL of the API gateway",
-            "Value": {"Fn::Join": ["", ["https://", {"Ref": "clubMember"}, ".execute-api.", {"Ref": "AWS::Region"}, ".amazonaws.com/", {"Fn::If": ["ShouldNotCreateEnvResources","Prod", {"Ref": "env"} ]}]]}
+            "Value": {"Fn::Join": ["", ["https://", {"Ref": "FacebookEventsApi"}, ".execute-api.", {"Ref": "AWS::Region"}, ".amazonaws.com/", {"Fn::If": ["ShouldNotCreateEnvResources","Prod", {"Ref": "env"} ]}]]}
         },
         "ApiName": {
           "Description": "API Friendly name",
-          "Value": "clubMember"
+          "Value": "FacebookEventsApi"
         },
         "ApiId": {
           "Description": "API ID (prefix of API URL)",
-          "Value": {"Ref": "clubMember"}
+          "Value": {"Ref": "FacebookEventsApi"}
         }
     }
   }

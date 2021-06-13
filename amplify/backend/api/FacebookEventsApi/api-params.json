@@ -1,0 +1,41 @@
+{
+  "paths": [
+    {
+      "name": "/events",
+      "lambdaFunction": "getFBEvents",
+      "privacy": {
+        "protected": true,
+        "auth": [
+          "/GET"
+        ],
+        "unauth": [
+          "/GET"
+        ]
+      },
+      "policyResourceName": "/events"
+    }
+  ],
+  "resourceName": "FacebookEventsApi",
+  "apiName": "FacebookEventsApi",
+  "functionArns": [
+    {
+      "lambdaFunction": "getFBEvents"
+    }
+  ],
+  "privacy": {
+    "auth": 1,
+    "unauth": 1,
+    "authRoleName": "amplify-business-club-dev-84758-authRole",
+    "unAuthRoleName": "amplify-business-club-dev-84758-unauthRole"
+  },
+  "dependsOn": [
+    {
+      "category": "function",
+      "resourceName": "getFBEvents",
+      "attributes": [
+        "Name",
+        "Arn"
+      ]
+    }
+  ]
+}

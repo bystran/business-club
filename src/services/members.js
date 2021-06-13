@@ -1,10 +1,9 @@
-import axios from 'axios';
-
-const baseUrl = 'http://localhost:3001/members';
+import { DataStore } from '@aws-amplify/datastore';
+import { BoardMember } from '../models';
 
 const getAll = async () => {
-  const res = await axios.get(baseUrl);
-  return res.data;
+  const models = await DataStore.query(BoardMember);
+  return models;
 };
 
 export default {

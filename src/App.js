@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
+import Amplify from 'aws-amplify';
 import { connect } from 'react-redux';
 import ScrollableSection from 'react-update-url-on-scroll';
+import awsconfig from './aws-exports';
 import NavBar from './components/Navbar';
 import Footer from './components/Footer';
 import Vl from './components/VerticalLine';
@@ -14,6 +16,8 @@ import { initEvents } from './reducers/eventReducer';
 import JoinUs from './components/sections/JoinUs';
 
 import './sass/components/App.scss';
+
+Amplify.configure(awsconfig);
 
 function App(props) {
   useEffect(() => {
