@@ -2,9 +2,7 @@ import eventsService from '../services/events';
 
 export const initEvents = () => async (dispatch) => {
   try {
-
     const res = await eventsService.getEvents();
-
     dispatch({
       type: 'INIT-EVENTS',
       events: res,

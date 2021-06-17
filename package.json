@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@aws-amplify/datastore": "^3.1.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.2.1",
@@ -10,8 +11,6 @@
     "aws-amplify-react": "^3.1.5",
     "axios": "^0.19.2",
     "dotenv": "^8.6.0",
-    "eslint": "^6.8.0",
-    "husky": "^4.3.8",
     "json-server": "^0.16.3",
     "node-sass": "^4.13.1",
     "prop-types": "^15.7.2",
@@ -52,9 +51,14 @@
     ]
   },
   "devDependencies": {
-    "eslint-config-airbnb": "^18.2.1"
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint": "^5.16.0 || ^6.8.0 || ^7.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "husky": "^4.3.8"
   },
   "husky": {
-    "hooks": {}
+    "hooks": {
+      "pre-commit": "npm run validate"
+    }
   }
 }

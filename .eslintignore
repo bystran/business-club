@@ -1,2 +1,2 @@
 /amplify/**/*.js
-src\models
+/src/models/**/*.js
