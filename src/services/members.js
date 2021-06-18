@@ -1,4 +1,4 @@
-import { DataStore } from '@aws-amplify/datastore';
+import { DataStore } from 'aws-amplify';
 import { BoardMember } from '../models';
 
 const getAll = async () => {
