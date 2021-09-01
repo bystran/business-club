@@ -1,4 +1,4 @@
-type BoardMember @model @auth(rules: [{allow: public}]) {
+type BoardMember @model @auth(rules: [{allow: public, provider: iam}]) {
   id: ID!
   name: String
   photo_url: String
