@@ -10,41 +10,48 @@ import '../../sass/sections/Members.scss';
 const Members = (props) => {
   const { memberCard, members } = props;
   return (
-    <div className="members-section">
-      <Underlined
-        lineColor="#2980b9"
-      >
-        {' '}
-        <h1>Our Team</h1>
-        {' '}
-      </Underlined>
-      <div className="members-container">
-        { /* eslint-disable-next-line react/jsx-props-no-spreading */ }
-        {
-            members && members.length
-            && members.map((m) => (
-              <MemberMini
-                key={m.id}
-                img={m.photo_url}
-                name={m.name}
-                position={m.position}
-                onClick={() => { props.showMembCard(m); }}
-              />
-            ))
-          }
+    <>
+    { 
+      members && members.length ? (
+        <div className="members-section">
+          <Underlined
+            lineColor="#2980b9"
+          >
+            {' '}
+            <h1>Our Team</h1>
+            {' '}
+          </Underlined>
+          <div className="members-container">
+            { /* eslint-disable-next-line react/jsx-props-no-spreading */ }
+            {
+               members.map((m) => (
+                  <MemberMini
+                    key={m.id}
+                    img={m.photo_url}
+                    name={m.name}
+                    position={m.position}
+                    onClick={() => { props.showMembCard(m); }}
+                  />
+                ))
+              }
 
-      </div>
-      {
-                memberCard !== null
-                && (
-                <div className="member-card-holder">
-                  <Member />
-                </div>
-                )
+          </div>
+          {
+                    memberCard !== null
+                    && (
+                    <div className="member-card-holder">
+                      <Member />
+                    </div>
+                    )
 
-            }
+                }
 
-    </div>
+        </div>
+      )
+      :
+      <></>
+    }
+    </>
   );
 };
 

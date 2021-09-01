@@ -9,4 +9,4 @@ type BoardMember @model @auth(rules: [{allow: public}]) {
   facebook_url: String
   instagram_url: String
 }
- 
+   
