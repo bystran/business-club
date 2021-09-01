@@ -11,7 +11,7 @@ const Members = (props) => {
   const { memberCard, members } = props;
   return (
     <>
-    { 
+      {
       members && members.length ? (
         <div className="members-section">
           <Underlined
@@ -25,14 +25,14 @@ const Members = (props) => {
             { /* eslint-disable-next-line react/jsx-props-no-spreading */ }
             {
                members.map((m) => (
-                  <MemberMini
-                    key={m.id}
-                    img={m.photo_url}
-                    name={m.name}
-                    position={m.position}
-                    onClick={() => { props.showMembCard(m); }}
-                  />
-                ))
+                 <MemberMini
+                   key={m.id}
+                   img={m.photo_url}
+                   name={m.name}
+                   position={m.position}
+                   onClick={() => { props.showMembCard(m); }}
+                 />
+               ))
               }
 
           </div>
@@ -48,8 +48,7 @@ const Members = (props) => {
 
         </div>
       )
-      :
-      <></>
+        : <></>
     }
     </>
   );
