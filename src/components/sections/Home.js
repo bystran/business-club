@@ -17,7 +17,7 @@ const Home = () => (
           darkMonde
           heading={(
             <>
-              <h2>business club</h2>
+              <h2>Business Club</h2>
               <h1>We get you further</h1>
             </>
 )}
