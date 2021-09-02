@@ -8,7 +8,7 @@
     "@testing-library/user-event": "^7.2.1",
     "aws-amplify": "^4.1.1",
     "aws-amplify-react": "^3.1.5",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "dotenv": "^8.6.0",
     "json-server": "^0.16.3",
     "node-sass": "^4.13.1",
