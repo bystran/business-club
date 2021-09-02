@@ -1,0 +1,4 @@
+/amplify/**/*.js
+/src/models/**/*.js
+
+src\models

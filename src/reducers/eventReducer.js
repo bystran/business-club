@@ -8,7 +8,7 @@ export const initEvents = () => async (dispatch) => {
       events: res,
     });
   } catch (e) {
-    // do something here
+    //
   }
 };
 

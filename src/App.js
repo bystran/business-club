@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
+import Amplify, { Hub, DataStore } from 'aws-amplify';
 import { connect } from 'react-redux';
 import ScrollableSection from 'react-update-url-on-scroll';
+import awsconfig from './aws-exports';
 import NavBar from './components/Navbar';
 import Footer from './components/Footer';
 import Vl from './components/VerticalLine';
@@ -15,11 +17,29 @@ import JoinUs from './components/sections/JoinUs';
 
 import './sass/components/App.scss';
 
+Amplify.configure(awsconfig);
+
 function App(props) {
+  const { initMembers: fetchMembers, initEvents: fetchEvents } = props;
+  const initializeMembers = () => {
+    const removeListener = Hub.listen('datastore', async (capsule) => {
+      const { payload: { event } } = capsule;
+      if (event === 'ready') {
+        fetchMembers();
+      }
+    });
+
+    DataStore.start();
+
+    return () => {
+      removeListener();
+    };
+  };
   useEffect(() => {
-    props.initMembers();
-    props.initEvents();
-  });
+    fetchEvents();
+    return initializeMembers();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
     <div className="App">
       <NavBar />
