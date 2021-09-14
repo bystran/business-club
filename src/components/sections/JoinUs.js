@@ -30,7 +30,7 @@ const JoinUs = () => (
 
       <a
         className="link-btn"
-        href="https://docs.google.com/forms/d/e/1FAIpQLScUOAK7qT45ywjGdp3ZbTxcXgiY5xFhLlKNl96FLF83qgPg8g/viewform?usp=sf_link"
+        href="https://forms.gle/TrNrAB9UFr5FnXcs9"
         style={{
           background: '#2980B9',
           color: 'white',
