@@ -30,11 +30,11 @@ const Home = () => (
           succeed in today&apos;s highly competitive job market.
 
         </Paragraph>
-        <LinkButton href="/join">
+        <LinkButton href="join">
           Join the Club
         </LinkButton>
         <LinkButton
-          href="/events"
+          href="events"
           color="white"
           background="rgba(44, 62, 80, 0.45)"
         >
@@ -81,7 +81,7 @@ const Home = () => (
     </div>
     <div className="last-home-btn">
       <LinkButton
-        href="/events"
+        href="events"
       >
         See upcoming events
       </LinkButton>

@@ -23,6 +23,12 @@
     nav{
         display: flex;
         justify-content: space-between;
+        a {
+           &, &:visited, &:active{
+                text-decoration: none;
+                color:white;
+           }
+        }
     }
 
     .underlined{

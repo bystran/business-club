@@ -23,7 +23,8 @@ const VerticalLine = (props) => {
                     && sections.map((s, index) => {
                       const width = `${25 * (1 + ((index + 1) % 2))}px`;
                       return (
-                        <div style={{ ...labelStyle, top: s.top }} key={s}>
+                        // eslint-disable-next-line react/no-array-index-key
+                        <div style={{ ...labelStyle, top: s.top }} key={index}>
                           <hr
                             style={{ width, marginRight: '10px', borderColor: props.color }}
                           />

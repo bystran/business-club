@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollableLink } from 'react-update-url-on-scroll';
+import { Link } from 'react-router-dom';
 
 const LinkButton = (props) => {
   const {
@@ -12,14 +12,17 @@ const LinkButton = (props) => {
   };
 
   return (
-    <ScrollableLink href={href}>
+    <Link
+      to={href}
+      duration={500}
+    >
       <span
         style={style}
         className="link-btn"
       >
         {children}
       </span>
-    </ScrollableLink>
+    </Link>
   );
 };
 

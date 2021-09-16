@@ -45,11 +45,11 @@ const ClubStats = () => (
         </PerkBox>
 
       </div>
-      <LinkButton href="/join">
+      <LinkButton href="join">
         Join the Club
       </LinkButton>
       <LinkButton
-        href="/team"
+        href="team"
         color="white"
         background="rgba(44, 62, 80, 0.75)"
       >
