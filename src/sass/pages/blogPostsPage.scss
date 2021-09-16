@@ -1,0 +1,34 @@
+@import '../variables';
+@import '../mixins';
+
+.blog-posts-page-wrapper{
+    .blog-posts-header{
+        height: 45vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+        &::before {
+            content: "";
+            background:  $gradient;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            z-index: 1;
+        }
+        &::after {
+            content: "";
+            background: url(../../assets/home.png) center center ;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            z-index: 2;
+        }
+
+        & > *{
+            position: relative;
+            z-index: 3;
+        }
+    }
+}

@@ -17,9 +17,10 @@
     "react-dom": "^16.14.0",
     "react-particles-js": "^3.4.1",
     "react-redux": "^7.2.4",
+    "react-router-dom": "^5.2.1",
     "react-scripts": "^3.4.4",
+    "react-scroll": "^1.8.4",
     "react-slick": "^0.26.1",
-    "react-update-url-on-scroll": "^3.5.0",
     "redux": "^4.1.0",
     "redux-thunk": "^2.3.0",
     "slick-carousel": "^1.8.1"
