@@ -1,0 +1,56 @@
+@import '../variables';
+@import '../mixins';
+
+.mentorship-page-wrapper{
+    .mentorship-header{
+        height: 45vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+        &::before {
+            content: "";
+            background:  $gradient;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            z-index: 1;
+        }
+        &::after {
+            content: "";
+            background: url(../../assets/home.png) center center ;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            z-index: 2;
+        }
+
+        & > *{
+            position: relative;
+            z-index: 3;
+        }
+    }
+
+    .mentorship-description{
+    .desc-name{
+        font-family: 'Roboto', 'sans-serif';   
+        margin:10px;
+        color: $dark-color;
+        font-size: 30px;
+        font-weight: 600;
+     
+    }
+    
+    .desc-cont{
+        font-size:16px;
+        margin:10px;
+        text-align: left;
+        color: bLack;
+        font-weight: 550;
+        width: 80%
+
+    }
+}
+
+}
