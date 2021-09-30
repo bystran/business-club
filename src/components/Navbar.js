@@ -14,7 +14,7 @@ const Navbar = () => {
     { ref: '/about', title: 'About' },
     { ref: '/events', title: 'Events' },
     { ref: '/team', title: 'Team' },
-    { ref: '/faq', title: 'FAQ'}
+    { ref: '/faq', title: 'FAQ' },
   ];
 
   const handleScroll = () => {

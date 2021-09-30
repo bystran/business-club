@@ -15,9 +15,8 @@ import { initMembers } from './reducers/memberReducer';
 import { initEvents } from './reducers/eventReducer';
 
 import './sass/components/App.scss';
-import BlogPostsPage from './components/pages/BlogPostsPage';
 import MentorshipPage from './components/pages/MentorshipPage';
-import FaqPage from "./components/pages/FaqPage";
+import FaqPage from './components/pages/FaqPage';
 
 Amplify.configure(awsconfig);
 
@@ -32,7 +31,7 @@ function App() {
           </Route>
 
           <Route path="/Faq">
-            <FaqPage/>
+            <FaqPage />
           </Route>
 
           <Route path={['/about', '/']}>
