@@ -16,7 +16,6 @@ import { initEvents } from './reducers/eventReducer';
 
 import './sass/components/App.scss';
 import MentorshipPage from './components/pages/MentorshipPage';
-import FaqPage from './components/pages/FaqPage';
 
 Amplify.configure(awsconfig);
 
@@ -28,10 +27,6 @@ function App() {
         <Switch>
           <Route path="/mentorship-programme">
             <MentorshipPage />
-          </Route>
-
-          <Route path="/Faq">
-            <FaqPage />
           </Route>
 
           <Route path={['/about', '/']}>

@@ -2,13 +2,45 @@
 @import '../mixins';
 
 .mentorship-page-wrapper{
+    a, a:active, a:hover{
+        text-decoration: none;
+    }
     .mentorship-header{
-        height: 45vh;
+        height: 80vh;
         display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
         z-index: 2;
+        .paragraph-wrapper{
+            padding: 0px 20px;
+            width:85%;
+            flex-basis: 85%;
+            @include mq('tablet'){
+
+                width: 550px;
+                flex-basis: 550px;
+            }
+            @include mq('tablet-wide'){
+                width: 650px;
+                flex-basis: 650px;
+
+
+            }
+            @include mq('desktop'){
+                width: 890px;
+                flex-basis: 890px;
+            }
+
+            @include mq('desktop-wide'){
+                width: 1000px;
+                flex-basis: 1000px;
+            }
+        }
+        p{
+            padding-top: 0px;
+            margin-top: 50px;
+        }
         &::before {
             content: "";
             background:  $gradient;
@@ -33,25 +65,38 @@
     }
 
     .mentorship-description{
-    .desc-name{
-        font-family: 'Roboto', 'sans-serif';   
-        margin:10px;
-        color: $dark-color;
-        font-size: 30px;
-        font-weight: 600;
+        padding: 50px 20px; 
+
+        @include mq('tablet'){
+            margin: auto;
+            max-width: 550px;
+        }
+
+        @include mq('tablet-wide'){
+            max-width: 650px;
+        }
+        @include mq('desktop'){
+            max-width: 890px;
+        }
+        @include mq('desktop-wide'){
+            max-width: 1000px;
+        }
+
         
+
+        .desc-name{            
+        }
+        
+        .desc-cont{
+            padding-top: 30px;
+            font-size:16px;
+            margin:10px 0px;
+            text-align: left;
+            color: bLack;
+            font-weight: 550;
+            padding-bottom: 10px;
+        }
     }
-    
-    .desc-cont{
-        font-size:16px;
-        margin:10px;
-        text-align: left;
-        color: bLack;
-        font-weight: 550;
-        width: 80%;
-        padding-bottom: 10px;
-    }
-}
 
     .mentorship-link{
         transition: all .1s;

@@ -6,6 +6,9 @@ function FAQ({ faq, index, toggleFAQ }) {
       className={`faq ${faq.open ? 'open' : ''}`}
       key={index}
       onClick={() => toggleFAQ(index)}
+      role="button"
+      tabIndex={0}
+      onKeyDown={() => toggleFAQ(index)}
     >
       <div className="faq-question">
         {faq.question}

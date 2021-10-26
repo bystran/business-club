@@ -1,9 +1,9 @@
+/* eslint-disable no-param-reassign */
 import React, { useState } from 'react';
 import FAQ from '../FAQ';
-import '../../sass/pages/FaqPage.scss';
-import Underlined from '../Underlined';
+import '../../sass/sections/MentorFAQ.scss';
 
-function App() {
+const MentorFAQ = () => {
   const [faqs, setfaqs] = useState([
     {
       question: 'Is there  a fee for the programme?',
@@ -53,13 +53,6 @@ function App() {
 
   return (
     <div className="App">
-      <header className="faq-header">
-        <Underlined>
-          <h1>
-            Mentorship FAQs
-          </h1>
-        </Underlined>
-      </header>
 
       <div className="faqs">
         {faqs.map((faq, i) => (
@@ -68,6 +61,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
-export default App;
+export default MentorFAQ;
