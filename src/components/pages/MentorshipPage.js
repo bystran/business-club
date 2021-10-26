@@ -1,53 +1,78 @@
 import React from 'react';
 import '../../sass/pages/mentorshipPage.scss';
-import Underlined from '../Underlined';
+import Paragraph from '../Paragraph';
+import LinkButton from '../LinkButton';
+
+import MentorFAQ from '../sections/MentorFAQ';
 
 const MentorshipPage = () => (
   <div className="mentorship-page-wrapper">
     <header className="mentorship-header">
-      <Underlined>
-        <h1>
-          Mentorship Programme
-        </h1>
-      </Underlined>
+      <Paragraph
+        darkMonde
+        heading={(
+          <>
+            <h2>Glasgow University Business Club</h2>
+            <h1>Mentorship Programme</h1>
+          </>
+        )}
+      >
+        <p>
+          Seize a unique opportunity to set and pursue
+          goals of your choosing with an experienced mentor who will offer guidance,
+          advice, and insights to help you achieve them faster.
+          We do not restrict the nature of the goals you wish to pursue –
+          if you wish to launch a startup, land the internship of your dreams,
+          or score stellar academic results, a mentor will help you with just that.
+        </p>
+        <a
+          className="link-btn"
+          href="https://forms.gle/Nu9NqEooFAGSF8P58"
+          style={{
+            background: '#2980B9',
+            color: 'white',
+            marginRight: '20px',
+          }}
+        >
+          Apply
+        </a>
+        <LinkButton
+          href="events"
+          color="white"
+          background="rgba(44, 62, 80, 0.45)"
+        >
+          Learn more
+        </LinkButton>
+        {/* <div className="mentorship-link">
+          <a href="https://forms.gle/Nu9NqEooFAGSF8P58">Appyly </a>
+        </div> */}
+      </Paragraph>
+
     </header>
 
     <div className="mentorship-description">
       <div className="desc-name">
-        <Underlined>
-          What is the GUBC mentorship programme?
-        </Underlined>
+        <h2 className="inverse-accent-color">
+          Your Menotor will help you
+        </h2>
+        <h1 className="inverse-color">
+          Persue & Reach Your Goals
+        </h1>
       </div>
       <div className="desc-cont">
-        The programme will give you the unique opportunity to set and pursue
-        goals of your choosing with an experienced mentor who will offer guidance,
-        advice, and insights to help you achieve them faster.
-        We do not restrict the nature of the goals you wish to pursue –
-        if you wish to launch a startup, land the internship of your dreams,
-        or score stellar academic results, a mentor will help you with just that.
+        The programme is designed to give you the unique opportunity to
+        set and pursue goals of your choosing under the guidence of an experience mentor,
+        who will offer guidance,advice, and insights to help you achieve what you set
+        out; be it launching a startup, landing the internship of your dreams,
+        or scoring stellar academic results. The mentor will help you with just that.
       </div>
 
       <div className="desc-name">
-        <Underlined>
-          What does the mentoring programme look like?
-        </Underlined>
-      </div>
-      <div className="desc-cont">
-        The programme will give you the unique opportunity to
-        set and pursue goals of your choosing with an experienced
-        mentor who will offer guidance, advice, and insights to help you
-        achieve them faster.
-        We do not restrict the nature of the goals you wish to pursue –
-        if you wish to launch a startup, land the internship of your dreams,
-        or score stellar academic results, a mentor will help you with just that.
-      </div>
-
-      <div className="desc-name">
-        <Underlined>
+        <h3 className="inverse-color">
           What will be expected of me?
-        </Underlined>
+        </h3>
       </div>
-      <div className="desc-cont">
+      <div className="desc-cont" style={{ marginTop: '20px', paddingTop: '0px' }}>
         The programme requires you to dedicate some of your free time and
         prep work before each meeting; consider if your schedule can accommodate
         this. We will supply successful applicants with a list of
@@ -62,11 +87,11 @@ const MentorshipPage = () => (
       </div>
 
       <div className="desc-name">
-        <Underlined>
-          What is the mentorship programme NOT for:
-        </Underlined>
+        <h3 className="inverse-color">
+          What is the mentorship programme NOT for
+        </h3>
       </div>
-      <div className="desc-cont">
+      <div className="desc-cont" style={{ marginTop: '20px', paddingTop: '0px' }}>
         The programme is not a casual conversation – a healthy mentor-mentee
         relationship requires putting in effort and applying what you have
         taken from the discussions into your life. Mentoring also
@@ -81,17 +106,26 @@ const MentorshipPage = () => (
         critically about what you will be discussing – feel free
         to disagree and offer your own perspective  on things.
       </div>
-    </div>
-
-
-    <div className = "mentorship-link">
-      <a href="https://forms.gle/Nu9NqEooFAGSF8P58">   Click Here to Apply To Our Mentorship programme </a>
-    </div>
-
-    <div className="mentorship-description">
-      <div className="desc-name">
-        
+      <div className="desc-name" style={{ paddingBottom: '20px' }}>
+        <h3 className="inverse-color">
+          Like what you see? Sign up for the programme!
+        </h3>
       </div>
+      <a
+        className="link-btn"
+        href="https://forms.gle/Nu9NqEooFAGSF8P58"
+        style={{
+          background: '#2980B9',
+          color: 'white',
+          marginRight: '20px',
+        }}
+      >
+        Apply
+      </a>
+      <h2 className="inverse-color" style={{ paddingTop: '50px' }}>
+        FAQs:
+      </h2>
+      <MentorFAQ />
     </div>
 
   </div>
