@@ -1,11 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { ScrollableLink } from 'react-update-url-on-scroll';
+import { Link } from 'react-router-dom';
 import { ReactComponent as Logo } from '../assets/logo.svg';
 import '../sass/Navbar.scss';
 
 const Navbar = () => {
   const [scrollPos, setScrollPos] = useState(0);
   const [classes, setClasses] = useState('atTop');
+  const callToActionLink = {
+    ref: '/join', title: 'Join us',
+  };
+  const links = [
+
+    { ref: '/about', title: 'About' },
+    { ref: '/events', title: 'Events' },
+    { ref: '/team', title: 'Team' },
+  ];
 
   const handleScroll = () => {
     const pastPos = scrollPos;
@@ -26,22 +35,11 @@ const Navbar = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   });
-
-  const links = [
-
-    { ref: '/about', title: 'About' },
-    { ref: '/events', title: 'Events' },
-    { ref: '/team', title: 'Team' },
-
-  ];
-
-  const callToActionLink = {
-    ref: '/join', title: 'Join us',
-  };
 
   return (
     <header className={`header ${classes}`}>
@@ -52,18 +50,18 @@ const Navbar = () => {
                         links.map((link, index) => (
                           // eslint-disable-next-line react/no-array-index-key
                           <li key={index}>
-                            <ScrollableLink href={link.ref}>
+                            <Link to={link.ref}>
                               <span>{link.title}</span>
-                            </ScrollableLink>
+                            </Link>
                           </li>
                         ))
                     }
-
+          <li><Link to="mentorship-programme">Mentorship Programme</Link></li>
         </ul>
         <div className="underlined">
-          <ScrollableLink href={callToActionLink.ref}>
+          <Link to={callToActionLink.ref}>
             <span>{callToActionLink.title}</span>
-          </ScrollableLink>
+          </Link>
         </div>
       </nav>
     </header>

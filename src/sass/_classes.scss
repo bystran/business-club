@@ -27,10 +27,18 @@
         padding:2px 40px;
         -webkit-filter: grayscale(100%)saturate(0%);
         filter: grayscale(100%) saturate(0%);
+        cursor: pointer;
+    }
+    &:visited, &:active {
+        text-decoration: none;
+        color:#2C3E50;
     }
 }
 .inverse-accent-color{
     color: $inverse-accent-color !important;
+}
+.inverse-color {
+    color: $inverse-color;
 }
 .white{
     color: white !important;
