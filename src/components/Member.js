@@ -40,7 +40,7 @@ const Member = (props) => {
                         member.instagram_url
                         && (
                         // eslint-disable-next-line react/jsx-no-target-blank
-                        <a target="_blank" href={member.linkedin_url}>
+                        <a target="_blank" href={member.instagram_url}>
                           <Insta />
                         </a>
                         )
