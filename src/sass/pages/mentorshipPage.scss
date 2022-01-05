@@ -1,0 +1,124 @@
+@import '../variables';
+@import '../mixins';
+
+.mentorship-page-wrapper{
+    a, a:active, a:hover{
+        text-decoration: none;
+    }
+    .mentorship-header{
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+        .paragraph-wrapper{
+            padding: 0px 20px;
+            width:85%;
+            flex-basis: 85%;
+            @include mq('tablet'){
+
+                width: 550px;
+                flex-basis: 550px;
+            }
+            @include mq('tablet-wide'){
+                width: 650px;
+                flex-basis: 650px;
+
+
+            }
+            @include mq('desktop'){
+                width: 890px;
+                flex-basis: 890px;
+            }
+
+            @include mq('desktop-wide'){
+                width: 1000px;
+                flex-basis: 1000px;
+            }
+        }
+        p{
+            padding-top: 0px;
+            margin-top: 50px;
+        }
+        &::before {
+            content: "";
+            background:  $gradient;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            z-index: 1;
+        }
+        &::after {
+            content: "";
+            background: url(../../assets/home.png) center center ;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            z-index: 2;
+        }
+
+        & > *{
+            position: relative;
+            z-index: 3;
+        }
+    }
+
+    .mentorship-description{
+        padding: 50px 20px; 
+
+        @include mq('tablet'){
+            margin: auto;
+            max-width: 550px;
+        }
+
+        @include mq('tablet-wide'){
+            max-width: 650px;
+        }
+        @include mq('desktop'){
+            max-width: 890px;
+        }
+        @include mq('desktop-wide'){
+            max-width: 1000px;
+        }
+
+        
+
+        .desc-name{            
+        }
+        
+        .desc-cont{
+            padding-top: 30px;
+            font-size:16px;
+            margin:10px 0px;
+            text-align: left;
+            color: bLack;
+            font-weight: 550;
+            padding-bottom: 10px;
+        }
+    }
+
+    .mentorship-link{
+        transition: all .1s;
+        margin:10px;
+        border-radius: 16.5px;
+        background: #4dedff;
+        display: inline;
+        font-size: 24px;
+        color:$dark-color;
+        text-decoration:none;
+        white-space: nowrap;
+        padding:2px 33px;
+        &:hover{
+            padding:2px 40px;
+            -webkit-filter: grayscale(100%)saturate(0%);
+            filter: grayscale(100%) saturate(0%);
+            cursor: pointer;
+        }
+        &:visited, &:active {
+            text-decoration: none;
+            color:$dark-color;
+        }
+    }
+
+}

@@ -14,7 +14,6 @@ const Navbar = () => {
     { ref: '/about', title: 'About' },
     { ref: '/events', title: 'Events' },
     { ref: '/team', title: 'Team' },
-
   ];
 
   const handleScroll = () => {
@@ -57,7 +56,7 @@ const Navbar = () => {
                           </li>
                         ))
                     }
-          <li><Link to="blog-posts">Blog</Link></li>
+          <li><Link to="mentorship-programme">Mentorship Programme</Link></li>
         </ul>
         <div className="underlined">
           <Link to={callToActionLink.ref}>
