@@ -53,7 +53,7 @@ const MentorshipPage = () => (
     <div className="mentorship-description">
       <div className="desc-name">
         <h2 className="inverse-accent-color">
-          Your Menotor will help you
+          Your Mentor will help you
         </h2>
         <h1 className="inverse-color">
           Persue & Reach Your Goals
