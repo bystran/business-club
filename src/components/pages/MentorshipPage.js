@@ -13,7 +13,7 @@ const MentorshipPage = () => (
         heading={(
           <>
             <h2>Glasgow University Business Club</h2>
-            <h1>Mentorship Programme!</h1>
+            <h1>Mentorship Programme/h1>
           </>
         )}
       >
