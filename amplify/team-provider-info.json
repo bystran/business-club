@@ -1,0 +1,27 @@
+{
+  "master": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-business-club-master-92744-authRole",
+      "UnauthRoleArn": "arn:aws:iam::731629755860:role/amplify-business-club-master-92744-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::731629755860:role/amplify-business-club-master-92744-authRole",
+      "Region": "eu-west-2",
+      "DeploymentBucketName": "amplify-business-club-master-92744-deployment",
+      "UnauthRoleName": "amplify-business-club-master-92744-unauthRole",
+      "StackName": "amplify-business-club-master-92744",
+      "StackId": "arn:aws:cloudformation:eu-west-2:731629755860:stack/amplify-business-club-master-92744/88ed7c00-ffda-11ea-9ec2-02495546d29e",
+      "AmplifyAppId": "d194viaet7ay5x",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-business-club-master-92744-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+    },
+    "categories": {
+      "auth": {
+        "cognitobb445345": {}
+      },
+      "function": {
+        "getFBEvents": {
+          "deploymentBucketName": "amplify-business-club-master-92744-deployment",
+          "s3Key": "amplify-builds/getFBEvents-46514474367a6f2b7032-build.zip"
+        }
+      }
+    }
+  }
+}

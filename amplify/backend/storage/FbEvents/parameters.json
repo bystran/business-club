@@ -1,7 +1,0 @@
-{
-    "tableName": "FbEvents",
-    "partitionKeyName": "id",
-    "partitionKeyType": "S",
-    "sortKeyName": "start_time",
-    "sortKeyType": "S"
-}

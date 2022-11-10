@@ -26,7 +26,7 @@ function App() {
         <NavBar />
         <Switch>
           <Route path="/mentorship-programme">
-            <MentorshipPage />
+            <MentorshipPage! />
           </Route>
 
           <Route path={['/about', '/']}>

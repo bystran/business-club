@@ -80,6 +80,7 @@ export const schema = {
                         "rules": [
                             {
                                 "allow": "public",
+                                "provider": "iam",
                                 "operations": [
                                     "create",
                                     "update",
@@ -95,5 +96,6 @@ export const schema = {
     },
     "enums": {},
     "nonModels": {},
-    "version": "f859925659fb88f2711d0e9075d3cb34"
+    "codegenVersion": "3.3.1",
+    "version": "9d8edc0c170c5860cc964c9c724359db"
 };

@@ -1,19 +1,33 @@
-import { ModelInit, MutableModel, PersistentModelConstructor } from "@aws-amplify/datastore";
+import { ModelInit, MutableModel } from "@aws-amplify/datastore";
+// @ts-ignore
+import { LazyLoading, LazyLoadingDisabled } from "@aws-amplify/datastore";
 
-
-
-
-
-export declare class BoardMember {
+type EagerBoardMember = {
   readonly id: string;
-  readonly name?: string;
-  readonly photo_url?: string;
-  readonly bio?: string;
-  readonly degree?: string;
-  readonly position?: string;
-  readonly linkedin_url?: string;
-  readonly facebook_url?: string;
-  readonly instagram_url?: string;
-  constructor(init: ModelInit<BoardMember>);
-  static copyOf(source: BoardMember, mutator: (draft: MutableModel<BoardMember>) => MutableModel<BoardMember> | void): BoardMember;
+  readonly name?: string | null;
+  readonly photo_url?: string | null;
+  readonly bio?: string | null;
+  readonly degree?: string | null;
+  readonly position?: string | null;
+  readonly linkedin_url?: string | null;
+  readonly facebook_url?: string | null;
+  readonly instagram_url?: string | null;
+}
+
+type LazyBoardMember = {
+  readonly id: string;
+  readonly name?: string | null;
+  readonly photo_url?: string | null;
+  readonly bio?: string | null;
+  readonly degree?: string | null;
+  readonly position?: string | null;
+  readonly linkedin_url?: string | null;
+  readonly facebook_url?: string | null;
+  readonly instagram_url?: string | null;
+}
+
+export declare type BoardMember = LazyLoading extends LazyLoadingDisabled ? EagerBoardMember : LazyBoardMember
+
+export declare const BoardMember: (new (init: ModelInit<BoardMember>) => BoardMember) & {
+  copyOf(source: BoardMember, mutator: (draft: MutableModel<BoardMember>) => MutableModel<BoardMember> | void): BoardMember;
 }
