@@ -1,0 +1,155 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-business-club-develop-122448-authRole",
+      "UnauthRoleArn": "arn:aws:iam::731629755860:role/amplify-business-club-develop-122448-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::731629755860:role/amplify-business-club-develop-122448-authRole",
+      "Region": "eu-west-2",
+      "DeploymentBucketName": "amplify-business-club-develop-122448-deployment",
+      "UnauthRoleName": "amplify-business-club-develop-122448-unauthRole",
+      "StackName": "amplify-business-club-develop-122448",
+      "StackId": "arn:aws:cloudformation:eu-west-2:731629755860:stack/amplify-business-club-develop-122448/7c03aff0-db04-11ea-94de-0ab07291f102",
+      "AmplifyAppId": "d194viaet7ay5x",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-business-club-develop-122448-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+    }
+  },
+  "hosting": {
+    "S3AndCloudFront": {
+      "service": "S3AndCloudFront",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "S3BucketSecureURL": "https://business-club-20200215084912-hostingbucket-develop.s3.amazonaws.com",
+        "WebsiteURL": "http://business-club-20200215084912-hostingbucket-develop.s3-website.eu-west-2.amazonaws.com",
+        "Region": "eu-west-2",
+        "HostingBucketName": "business-club-20200215084912-hostingbucket-develop"
+      },
+      "lastPushTimeStamp": "2022-07-24T22:36:27.211Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-business-club-develop-122448-deployment/amplify-cfn-templates/hosting/template.json",
+        "logicalId": "hostingS3AndCloudFront"
+      }
+    }
+  },
+  "function": {
+    "getFBEvents": {
+      "service": "Lambda",
+      "providerPlugin": "awscloudformation",
+      "build": true,
+      "output": {
+        "Region": "eu-west-2",
+        "Arn": "arn:aws:lambda:eu-west-2:731629755860:function:getFBEvents-develop",
+        "Name": "getFBEvents-develop",
+        "LambdaExecutionRole": "businessclubLambdaRolecdeff34d-develop"
+      },
+      "lastPushTimeStamp": "2022-07-24T22:36:27.220Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-business-club-develop-122448-deployment/amplify-cfn-templates/function/getFBEvents-cloudformation-template.json",
+        "logicalId": "functiongetFBEvents"
+      },
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-business-club-develop-122448-deployment",
+        "s3Key": "amplify-builds/getFBEvents-46514474367a6f2b7032-build.zip"
+      }
+    }
+  },
+  "storage": {},
+  "api": {
+    "FacebookEventsApi": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "getFBEvents",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ],
+      "output": {
+        "ApiName": "FacebookEventsApi",
+        "RootUrl": "https://n7u1kfcl3j.execute-api.eu-west-2.amazonaws.com/develop",
+        "ApiId": "n7u1kfcl3j"
+      },
+      "lastPushTimeStamp": "2022-07-24T22:36:27.231Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-business-club-develop-122448-deployment/amplify-cfn-templates/api/FacebookEventsApi-cloudformation-template.json",
+        "logicalId": "apiFacebookEventsApi"
+      }
+    },
+    "BusinessClub": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "AWS_IAM"
+          },
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "API_KEY",
+              "apiKeyConfig": {
+                "apiKeyExpirationDays": 30,
+                "description": "api key description"
+              }
+            },
+            {
+              "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+              "userPoolConfig": {
+                "userPoolId": "authcognitobb445345"
+              }
+            }
+          ]
+        },
+        "GraphQLAPIIdOutput": "sb2xzyoh6bbhjbni57vagxnbzu",
+        "GraphQLAPIEndpointOutput": "https://rwr5cghzlrdrpp6pimrx6ycggy.appsync-api.eu-west-2.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-hazq33i5mvdnxixdfysdgyqkwu"
+      },
+      "lastPushTimeStamp": "2022-07-24T22:36:27.244Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-business-club-develop-122448-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apiBusinessClub"
+      }
+    }
+  },
+  "auth": {
+    "cognitobb445345": {
+      "service": "Cognito",
+      "serviceType": "managed",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "UserPoolId": "eu-west-2_ysKFpJSry",
+        "AppClientIDWeb": "1j1d893r274a0gu3646iq5j010",
+        "AppClientID": "6tpp80am816jblsdvm4s78gr3q",
+        "IdentityPoolId": "eu-west-2:d1e00947-a885-41a6-b194-6d7bb076011f",
+        "UserPoolArn": "arn:aws:cognito-idp:eu-west-2:731629755860:userpool/eu-west-2_ysKFpJSry",
+        "IdentityPoolName": "business_club_identitypool_bb445345__develop",
+        "UserPoolName": "business_club_userpool_bb445345"
+      },
+      "lastPushTimeStamp": "2022-07-24T22:36:27.254Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-business-club-develop-122448-deployment/amplify-cfn-templates/auth/cognitobb445345-cloudformation-template.yml",
+        "logicalId": "authcognitobb445345"
+      },
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      }
+    }
+  }
+}
